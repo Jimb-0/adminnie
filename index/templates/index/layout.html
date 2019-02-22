@@ -1,0 +1,163 @@
+<! Doctype.html >
+<html lang="en-US" class="no-js">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+    <title>Nomad Movers</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    {% load staticfiles %}
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'index/pics/NMsvg.svg' %}">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'fonts/foundation-icons.css' %}">
+    <link rel="stylesheet" href="static/fonts/foundation-icons.css' %}">
+</head>
+<body >
+    <!-- Include Spanish version -->
+
+                        <!--Top Bar -->
+    <div class=" sign-container ">
+        <div id="sign" class = "grid-x grid-padding-x">
+
+            <a href="{% url 'index' %}" title="Nomad Movers | Home" class="large-6"> <h1> <strong>Nomad Movers</strong> </h1>
+
+            </a>
+
+            <a href="{% url 'index' %}" class="large-6 columns hide-for-large" id="sign-logo">
+           <img src="{% static 'index/pics/Nmsvg.svg' %}" class="show-for-small">
+           </a>
+
+            <p id="desc"  class="large-6" >On-Demand <br>Moving Labor</p>
+        </div>
+    </div>
+    <div class="clear"></div>
+     <!--NAV BAR-->
+
+        <div id="navBar" class="navbar" style="border-bottom: .1px white solid;">
+
+
+            <div class="fixed-bar ">
+
+                <a href="javascript:void(0);" class="icon hide-for-large" onclick="myFunction()">
+
+                        <i class="fi-align-justify "></i>
+                </a>
+
+
+                <div class="clear show-for-small show-for-medium"></div>
+                <div class="logo-container">
+
+                    <a href="{% url 'index' %}">
+                    <img class="logo" img src="{% static 'index/pics/Nmsvg.svg' %}"  alt="NM logo" title="Home"/>
+
+                    </a>
+
+                </div>
+
+                <div class="space"></div>
+
+                <div class="menu-container  ">
+
+                        <div class="menu-bar ">
+                            <ul>
+															<a href="{% url 'index:services' %}"><li>Services</li></a>
+															<a href="{% url 'index:theteam' %}"><li>The Team</li></a>
+															<a href="{% url 'index:quotes' %}"><li>Quotes</li></a>
+															<a href="{% url 'index:insurance' %}"><li>Insurance</li></a>
+															<a href="{% url 'index:contact' %}"><li>Contact Us</li></a>
+                            </ul>
+                        </div>
+
+            </div>
+
+
+        <a href="{% url 'index:quotes' %}"><button id="navbar-button" class="button">Get Quote</button></a>
+        </div>
+
+    </div>
+             <div class="clear"></div>
+
+             {% block body_block %}
+
+             {% endblock %}
+
+	<footer id="nomad_foot" class="">
+		
+
+				<ul id="footer_ul">
+
+					<li class="footer-logo-box">
+							 			<div id="footer-img-box">
+							 					<img src="{% static 'index/pics/Nmsvg.svg' %}" alt="">
+							 			</div>
+										<div style="height: 3rem;">
+
+										</div>
+
+			 	</li>
+
+					<li class="footer-link-box">
+							<h2> Navigation </h2>
+							<ul style="width:100%; text-align:left;">
+									<li>
+
+
+										<ul  id="footer-link-ul" >
+											<li>
+												<p>Moving Tips</p>
+												<p>Blog</p>
+												<p>Careers</p>
+										</li>
+
+										<li>
+											<p>Terms <p/>
+											<p>Privacy Policy<p>
+											<p>Sitemap</p>
+
+										</li>
+
+									 </ul>
+
+								</li>
+
+				 			</ul>
+
+					</li>
+					<li class="mls-tag rounded-social-buttons" >
+						<ul>
+							<li><h2 class="class-link" >Contact us <a tel="+6468206683">(646)820-6683</a></h2></li>
+							<li>
+								<a target="_blank" title="follow me on facebook" href="https://www.facebook.com/nomadmovers">
+									<img alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0>
+								</a>
+
+						  </li>
+							<li style="margin:30px;">
+								<a target="_blank" title="follow me on instagram" href="https://www.instagram.com/nomadmovers">
+								<img alt="follow me on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" border=0>
+							</a>
+
+							</li>
+
+
+						</ul>
+
+					</li>
+					<li class="copywright">
+							<p > &reg; Nomad Movers, LLC. All Rights Reserved</p>
+
+					</li>
+						<li class="bottom-line">
+								<p>Nomad Movers | Moving Labor Service</p>
+
+						</li>
+
+			</ul>
+        <!-- <a href="instagram.com/nomadmovers" title="instagram.com/nomadmovers"><i class="fa fi-instagram" style="font-size:24px; margin: 0 10px;"></i></a>
+				 		                    <a href="facebook.com/nomadmovers" title="facebook.com/nomadmovers"><i class="fa fi-facebook" style="font-size:24px; margin: 0 10px;"></i></a> -->
+</footer>
+
+
+</body>
+</html>

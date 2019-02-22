@@ -1,0 +1,64 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <style>
+    body{
+      font-family:'Helvetica',sans-serif;
+      text-align:center;
+    }
+    #login-box{
+      padding:20px;
+      width:60%;
+      margin:5% auto;
+      border-radius:5px;
+
+    }
+    #login-box h1{
+      font-size: 50px;
+    }
+
+    .inputs{
+      border-radius:5px;
+      padding:5px;
+      border: 1px solid black;
+    }
+    .submit{
+      border:none;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <div>
+
+    <div class="jumbotron" id="login-box">
+      <h1 class="display-4">Welcome To Nomad Movers<h1>
+      <h2> Sign In </h2>
+      <hr class="my-4">
+      <p>Please register if you do not have an account</p>
+      <div class="container">
+        <form method="POST">
+
+          {% csrf_token %}
+          {{ login_stuff.as_p }}
+
+          <input type="submit" value="Submit" class="btn-lg btn-primary submit">
+      </form>
+      </div> <!-- END OF FORM DIV -->
+      <br>
+      <a href="#">Forgot Password<a/> | <a href="cool_page.html">Sign Up</a>
+    </div>
+  </div>
+
+</body>
+</html>
