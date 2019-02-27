@@ -814,6 +814,9 @@ body ul {
         scale: 1.2
     }
 }
+#services-container #first h1, #services-container #second h1{
+  color:#112d50;
+}
 #first img, #second img{
   height:150px;
   width:150px;
@@ -1274,6 +1277,9 @@ footer .copywright, .bottom-line{
   width: 100%;
   justify-content: center;
   margin-top: 2rem;
+}
+#quote_form .input-set{
+  display:flex;
 }
 #quote-submit-input{
   border-radius: 5px;
@@ -2306,6 +2312,12 @@ input::placeholder{
     }
     #quotes-container #quote-box {
         margin: 0
+    }
+    #quote_form .input-set{
+      display:unset;
+    }
+    #quote_form .input-set .input-box{
+      width:100%;
     }
     footer {
         font-size: .5rem
