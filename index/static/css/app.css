@@ -28,13 +28,13 @@ screen and (min-width: 40em) {
 #services-container .service-box,
 #labor-wrapper li {
     padding: 5px 15px;
-    height: 250px;
+    height: 275px;
     width: 300px;
     background: white;
     margin: 50px 50px;
-    -webkit-box-shadow: 10px 10px 30px -15px grey;
-    box-shadow: 10px 10px 30px -15px grey;
-    border-radius: 3px
+    -webkit-box-shadow: 20px 13px 30px -15px grey;
+    box-shadow: 20px 13px 30px -15px grey;
+    border-radius: 10px;
 }
 
 .box h1,
@@ -63,7 +63,8 @@ body {
     font-style: normal;
     background: aliceblue;
     display: block;
-    text-decoration: none
+    text-decoration: none;
+    letter-spacing:1;
 }
 
 body a {
@@ -531,7 +532,7 @@ body ul {
 
 .container {
     margin: 0 auto;
-    width: 1264px
+    width: 100%;
 }
 
 .container #benefits {
@@ -718,7 +719,7 @@ body ul {
 }
 
 #services-container {
-    margin:50px 0 75px 0;
+    margin:0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -726,10 +727,13 @@ body ul {
     flex-wrap: wrap;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center
+    justify-content: center;
+    background-image: url("/static/index/pics/chris-pods.jpg");
+    background-repeat: no-repeat;
 }
 #services-container h1:first-child {
   margin-bottom:20px;
+  color:white;
 }
 
 #services-container h1 {
@@ -810,69 +814,12 @@ body ul {
         scale: 1.2
     }
 }
-
-#load-box {
-    position: relative
+#first img, #second img{
+  height:150px;
+  width:150px;
+  background:white;
+  border-radius:50%;
 }
-
-#load-box img {
-    height: 150px;
-}
-
-#load-box p {
-    position: relative;
-    top: 35px
-}
-
-#load-box p span {
-    text-decoration: underline
-}
-
-#unload-box {
-    position: relative
-}
-
-#unload-box img {
-    height: 150px;
-}
-
-#unload-box p {
-    position: relative;
-    top: 35px
-}
-
-#unload-box p span {
-    text-decoration: underline
-}
-
-#pack-box {
-    position: relative
-}
-
-#pack-box img {
-    height: 150px;
-    width: 150px;
-}
-
-#pack-box p {
-    position: relative;
-    top: 35px
-}
-
-#office-box {
-    position: relative
-}
-
-#office-box img {
-    height: 150px;
-    width: 150px;
-}
-
-#office-box p {
-    position: relative;
-    top: 36px
-}
-
 #customer-social-container {
     background: #112d50;
     margin-top: 0px;
@@ -994,7 +941,7 @@ body ul {
     border-radius: 3px
 }
 
-#nomad_foot {
+.nomad_foot {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1003,9 +950,8 @@ body ul {
     position:absolute;
     width:100%;
     justify-content: center;
-}
-footer{
-  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzI4MjgyOCI+PC9yZWN0Pgo8Y2lyY2xlIGN4PSIzIiBjeT0iNC4zIiByPSIxLjgiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIzIiBjeT0iMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+CjxjaXJjbGUgY3g9IjEwLjUiIGN5PSIxMi41IiByPSIxLjkiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIxMC41IiBjeT0iMTEuMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+Cjwvc3ZnPg==");
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzI4MjgyOCI+PC9yZWN0Pgo8Y2lyY2xlIGN4PSIzIiBjeT0iNC4zIiByPSIxLjgiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIzIiBjeT0iMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+CjxjaXJjbGUgY3g9IjEwLjUiIGN5PSIxMi41IiByPSIxLjkiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIxMC41IiBjeT0iMTEuMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+Cjwvc3ZnPg==");
+
 }
 footer #footer_ul{
   display:flex;
@@ -1044,6 +990,13 @@ footer #footer-link-box ul{
   display: flex;
   align-items: flex-start;
   justify-content: center;
+}
+.mls-tag h3 a{
+  color:white
+
+}
+.mls-tag h3 a:hover{
+  cursor: pointer;
 }
 footer .copywright, .bottom-line{
   width:50%;
@@ -1189,8 +1142,7 @@ footer .copywright, .bottom-line{
     width: 515px;
     height: 500px;
     margin: 0;
-    border-radius: 5px;
-    background: black
+    border-radius: 20px;
 }
 
 #services-top #service-text {
@@ -1213,13 +1165,17 @@ footer .copywright, .bottom-line{
 }
 
 
-#labor-wrapper h1 {
+#labor-wrapper {
     margin-top: 240px;
-    font-family: "Book Antiqua"
 }
 
 #labor-wrapper h2 {
-    font-family: "Book Antiqua"
+    font-family: "Book Antiqua";
+    margin:5px;
+    color:white;
+}
+#labor-wrapper h1{
+  font-family: "Book Antiqua";
 }
 
 #labor-wrapper ul {
@@ -1227,20 +1183,18 @@ footer .copywright, .bottom-line{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 340px
 }
 
 #labor-wrapper li {
     overflow: hidden;
-    position: relative
+    position: relative;
+    height:350px;
+    background: #112d50;
+    color: white;
 }
 
-#labor-wrapper li img {
-    position: absolute
-}
 
 #labor-wrapper li p {
-    position: relative
 }
 
 #labor-wrapper li:hover {
@@ -1254,8 +1208,7 @@ footer .copywright, .bottom-line{
     animation-duration: 5s;
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
-    background: #112d50;
-    color: white
+
 }
 
 #labor-wrapper li:hover a {
@@ -1273,103 +1226,11 @@ footer .copywright, .bottom-line{
         scale: 1.2
     }
 }
-
-#labor-wrapper .labor1 img {
-    height: 150px;
-    left: 50px;
-    top: 33px
-}
-
-#labor-wrapper .labor1 p {
-    top: 84px
-}
-
-#labor-wrapper .labor1 p span {
-    text-decoration: underline
-}
-
-#labor-wrapper #labor2 img {
-    height: 150px;
-    left: 50px;
-    top: 33px
-}
-
-#labor-wrapper #labor2 p {
-    top: 84px
-}
-
-#labor-wrapper #labor3 img {
-    height: 242px;
-    left: 2px;
-    top: -12px
-}
-
-#labor-wrapper #labor3 p {
-    top: 84px
-}
-
-#labor-wrapper #labor4 img {
-    height: 242px;
-    left: 2px;
-    top: -12px
-}
-
-#labor-wrapper #labor4 p {
-    top: 84px
-}
-
-#labor-wrapper #labor5 img {
-    height: 242px;
-    left: 2px;
-    top: -12px
-}
-
-#labor-wrapper #labor5 p {
-    top: 84px
-}
-
-#labor-wrapper #labor6 img {
-    height: 242px;
-    left: 2px;
-    top: -12px
-}
-
-#labor-wrapper #labor6 p {
-    top: 84px
-}
-
-#labor-wrapper #labor7 a:hover {
-    background: #f0f8ff
-}
-
-#labor-wrapper #labor7 img {
-    height: 150px;
-    left: 50px;
-    top: 33px
-}
-
-#labor-wrapper #labor7 p {
-    position: relative;
-    top: 84px
-}
-
-#labor-wrapper #labor8 img {
-    height: 242px;
-    left: 2px;
-    top: -12px
-}
-
-#labor-wrapper #labor8 p {
-    top: 84px
-}
-
-#labor-wrapper #labor9 img {
-    height: 242px;
-    left: 2px;
-    top: -12px
-}
-#labor-wrapper #labor9 p {
-    top: 84px
+#labor-wrapper img {
+  border-radius: 50%;
+  background: white;
+  height:150px;
+  width:150px;
 }
 #labor-button{
     width: 170px;
@@ -1406,13 +1267,29 @@ footer .copywright, .bottom-line{
     padding-top: 20px;
 }
 
-#quotes-container #quote-box #quote-submit-box{
+#quote_form #quote-submit-box{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 2rem;
+}
+#quote-submit-input{
+  border-radius: 5px;
+    letter-spacing: 1;
+}
+input::placeholder{
+  color:black;
+}
+#tools{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0 20px;
+    margin: 20px auto;
+    width: 80%;
+    background: #46444fd9;
+    color: white;
 }
 
 #quote-box form label {
@@ -1463,10 +1340,11 @@ footer .copywright, .bottom-line{
 
 #insurance-container {
     text-align: left;
+    width:85%;
 }
 
 #insurance-container #insurance-wrapper #insurance-requests p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 #insurance-container #insurance-requests p span {
@@ -1591,7 +1469,7 @@ footer .copywright, .bottom-line{
 }
 
 #team-div #team-pic-text a {
-    color: ##4f63ca;
+    color: springgreen;
     text-decoration: underline
 }
 
@@ -1600,7 +1478,9 @@ footer .copywright, .bottom-line{
 }
 
 #team-about-us {
-    text-align: left
+    text-align: left;
+    width: 85%;
+    margin: 0 auto;
 }
 
 #team-about-us h2 {
@@ -2018,7 +1898,9 @@ footer .copywright, .bottom-line{
         width: inherit
     }
     .container #benefits {
-        margin-top: 0
+        margin-top: 0;
+        margin: 0 auto;
+        width: 80%;
     }
     .container #benefits #benefits-header {
         padding: 0;
@@ -2048,14 +1930,8 @@ footer .copywright, .bottom-line{
     .container #steps #ul-container .invisible-nums {
         font-size: 376px
     }
-    .container #steps #ul-container #one {
-        left: 51px
-    }
-    .container #steps #ul-container #two {
-        left: 328px
-    }
-    .container #steps #ul-container #three {
-        right: 13px
+    .container #steps #ul-container #one,.container #steps #ul-container #two,.container #steps #ul-container #three {
+        display:none;
     }
     .container #steps strong {
         font-size: 1.5rem
@@ -2150,8 +2026,7 @@ footer .copywright, .bottom-line{
         justify-content: space-between
     }
     #sign #sign-logo {
-        height: 100px;
-        width: 129px;
+        width: 100px;
         padding: 0
     }
     #sign #sign-logo img {
@@ -2200,14 +2075,16 @@ footer .copywright, .bottom-line{
     #landing .rapper-container {
         padding: 0 18px;
         margin-top: -86px;
-        height: unset
+        height: unset;
+        margin-left:auto;
+        margin-right:auto;
     }
     #landing .rapper-container .rapper {
         text-align: center;
         height: unset
     }
     #landing .rapper-container .rapper h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
         text-align: center
     }
     #landing .rapper-container .rapper p {
@@ -2297,7 +2174,8 @@ footer .copywright, .bottom-line{
     .container #services-container {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
-        justify-content: center
+        justify-content: center;
+        background-image: url(cust-cheese.jpg);
     }
     .container #services-container .service-box {
         margin: 30px 242px

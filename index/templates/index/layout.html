@@ -1,4 +1,4 @@
-<! Doctype.html >
+<!Doctype.html >
 <html lang="en-US" class="no-js">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
@@ -6,7 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     {% load staticfiles %}
-    <link rel="shortcut icon" type="image/jpg" href="{% static 'index/pics/NMsvg.svg' %}">
+    <link rel="shortcut icon" type="image/svg" href="{% static 'index/pics/NM-logo-dolly-w.svg' %}">
     <link rel="stylesheet" href="{% static 'css/app.css' %}" type="text/css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
@@ -25,7 +25,7 @@
             </a>
 
             <a href="{% url 'index' %}" class="large-6 columns hide-for-large" id="sign-logo">
-           <img src="{% static 'index/pics/Nmsvg.svg' %}" class="show-for-small">
+           <img src="{% static 'index/pics/NM-logo-dolly-w.svg' %}" class="show-for-small">
            </a>
 
             <p id="desc"  class="large-6" >On-Demand <br>Moving Labor</p>
@@ -49,7 +49,7 @@
                 <div class="logo-container">
 
                     <a href="{% url 'index' %}">
-                    <img class="logo" img src="{% static 'index/pics/Nmsvg.svg' %}"  alt="NM logo" title="Home"/>
+                    <img class="logo" img src="{% static 'index/pics/NM-logo-dolly-w.svg' %}"  alt="NM logo" title="Home"/>
 
                     </a>
 
@@ -82,14 +82,14 @@
 
              {% endblock %}
 
-	<footer id="nomad_foot" class="">
-		
+	<footer class="nomad_foot" >
+
 
 				<ul id="footer_ul">
 
 					<li class="footer-logo-box">
 							 			<div id="footer-img-box">
-							 					<img src="{% static 'index/pics/Nmsvg.svg' %}" alt="">
+							 					<img src="{% static 'index/pics/NM-logo-dolly-w.svg' %}" alt="">
 							 			</div>
 										<div style="height: 3rem;">
 
@@ -126,16 +126,16 @@
 					</li>
 					<li class="mls-tag rounded-social-buttons" >
 						<ul>
-							<li><h2 class="class-link" >Contact us <a tel="+6468206683">(646)820-6683</a></h2></li>
+							<li><h2 class="class-link" >Contact Us</h2> <h3> <a tel="+6468206683">(646)820-6683</a></h3></li>
 							<li>
-								<a target="_blank" title="follow me on facebook" href="https://www.facebook.com/nomadmovers">
-									<img alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0>
+								<a target="_blank" title="follow us on facebook" href="https://www.facebook.com/nomadmovers">
+									<i class="fa fi-social-facebook" style="font-size:36px; color:#415e82;"></i>
 								</a>
 
 						  </li>
-							<li style="margin:30px;">
-								<a target="_blank" title="follow me on instagram" href="https://www.instagram.com/nomadmovers">
-								<img alt="follow me on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" border=0>
+							<li >
+								<a target="_blank" title="follow us on instagram" href="https://www.instagram.com/nomadmovers">
+								<i class="fa fi-social-instagram" style="font-size:36px; color:rosybrown;"></i>
 							</a>
 
 							</li>
