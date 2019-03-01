@@ -25,7 +25,7 @@ screen and (min-width: 40em) {
 }
 
 .box,
-#services-container .service-box,
+#service-container-inside .service-box,
 #labor-wrapper li {
     padding: 5px 15px;
     height: 275px;
@@ -38,13 +38,13 @@ screen and (min-width: 40em) {
 }
 
 .box h1,
-#services-container .service-box h1,
+#service-container-inside .service-box h1,
 #labor-wrapper li h1 {
     font-family: "Book Antiqua"
 }
 
 .box i,
-#services-container .service-box i,
+#service-container-inside .service-box i,
 #labor-wrapper li i {
     font-size: 60px;
     color: #112d50;
@@ -68,14 +68,14 @@ body {
 }
 
 body a {
-    color: #112d50;
+    color: white;
     -webkit-transition: color .5s ease-in;
     transition: color .5s ease-in;
     text-decoration: none
 }
 
 body a:hover {
-    color: #2d77d2
+    color: #2d77d2;
 }
 
 body ul {
@@ -280,17 +280,16 @@ body ul {
     height: 42px;
     width: 150px;
     border-radius: 3px;
-    background: black;
-    border: 1px white solid
+    background:  #2d77d2;
 }
 
 .navbar #navbar-button:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
-    border: 2px #112d50 solid;
+    border: 2px white solid;
     border-radius: 3px;
-    background:#112d50;
+    background:black;
 }
 
 .navbar {
@@ -613,7 +612,6 @@ body ul {
     margin-top: 150px;
     padding: 80px 0;
     position: relative;
-    height: 850.4px;
     float: left
 }
 
@@ -690,6 +688,7 @@ body ul {
 
 #steps .invisible-nums {
     position: absolute;
+    display:none;
     font-size: 400;
     z-index: -50;
     opacity: .05;
@@ -717,8 +716,21 @@ body ul {
     height: 100%;
     z-index: -100
 }
-
-#services-container {
+#services-container{
+    position:relative;
+}
+#services-container::before{
+    content:"";
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background-image: url("/static/index/pics/chris-pods.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:blur(2px);
+}
+#service-container-inside {
+    position:relative;
     margin:0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -728,34 +740,34 @@ body ul {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background-image: url("/static/index/pics/chris-pods.jpg");
-    background-repeat: no-repeat;
+    width: 70%;
+    margin: 0 auto;
 }
-#services-container h1:first-child {
+#service-container-inside h1:first-child {
   margin-bottom:20px;
   color:white;
 }
 
-#services-container h1 {
+#service-container-inside h1 {
     color: #112d50;
     margin:14px;
 }
 
-#services-container #first {
+#service-container-inside #first {
     margin-top: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex
 }
 
-#services-container #second {
+#service-container-inside #second {
     margin-top: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex
 }
 
-#services-container #first div:hover {
+#service-container-inside #first div:hover {
     background: #112d50;
     color: #f0f8ff;
     cursor: hand;
@@ -763,11 +775,11 @@ body ul {
     transition: background .2s linear
 }
 
-#services-container #first div:hover h1 {
+#service-container-inside #first div:hover h1 {
     color: #f0f8ff
 }
 
-#services-container #second div:hover {
+#service-container-inside #second div:hover {
     background: #112d50;
     color: #f0f8ff;
     cursor: hand;
@@ -775,11 +787,11 @@ body ul {
     transition: background .2s linear
 }
 
-#services-container #second div:hover h1 {
+#service-container-inside #second div:hover h1 {
     color: #f0f8ff
 }
 
-#services-container .service-box:hover {
+#service-container-inside .service-box:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
@@ -814,7 +826,7 @@ body ul {
         scale: 1.2
     }
 }
-#services-container #first h1, #services-container #second h1{
+#service-container-inside #first h1, #service-container-inside #second h1{
   color:#112d50;
 }
 #first img, #second img{
@@ -925,7 +937,6 @@ body ul {
 }
 
 #service-area-head h1 {
-    font-family: "Book Antiqua";
     font-size: 3em;
 }
 
@@ -941,7 +952,7 @@ body ul {
 #map-div img {
     height: 600px;
     width: 600px;
-    border-radius: 3px
+    border-radius: 20px
 }
 
 .nomad_foot {
@@ -956,6 +967,15 @@ body ul {
     background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzI4MjgyOCI+PC9yZWN0Pgo8Y2lyY2xlIGN4PSIzIiBjeT0iNC4zIiByPSIxLjgiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIzIiBjeT0iMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+CjxjaXJjbGUgY3g9IjEwLjUiIGN5PSIxMi41IiByPSIxLjkiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIxMC41IiBjeT0iMTEuMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+Cjwvc3ZnPg==");
 
 }
+footer #footer-link-ul a{
+  color:white;
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+footer #footer-link-ul a:hover{
+  color:#2d77d2;
+}
+
 footer #footer_ul{
   display:flex;
   flex-wrap:wrap;
@@ -966,11 +986,20 @@ footer #footer_ul{
 }
 footer #footer-link-ul{
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
   padding:0;
+}
+footer #footer-link-ul h2{
+  width:100%;
 }
 footer #footer-link-box ul{
   padding-left:0;
+}
+footer #footer-link-box a{
+  color:white;
+}
+.navigation-list-2{
+  margin-left: 3.1rem;
 }
 #footer_ul .footer-logo-box, #footer_ul .footer-link-box, #footer_ul .mls-tag{
     width:33%;
@@ -1685,30 +1714,30 @@ input::placeholder{
     #steps #ul-container ul li{
       padding:0 73px;
     }
-    #services-container h1:first-child{
+    #service-container-inside h1:first-child{
       width:100%;
       font-size:3rem;
     }
-    #services-container #first{
+    #service-container-inside #first{
       width:100%;
       justify-content: center;
     }
-    #services-container #second{
+    #service-container-inside #second{
       width:100%;
       justify-content: center;
     }
-    #services-container .service-box{
+    #service-container-inside .service-box{
       height:320px;
       width:400px;
     }
-    #services-container .service-box img{
+    #service-container-inside .service-box img{
       height:200px;
       width:200px;
     }
     .service-box h1{
 
     }
-    #services-container .service-box:hover{
+    #service-container-inside .service-box:hover{
       transform:scale(1.1)
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -2177,13 +2206,13 @@ input::placeholder{
         right: 129px;
         bottom: 18px
     }
-    .container #services-container {
+    .container #service-container-inside {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
         background-image: url(cust-cheese.jpg);
     }
-    .container #services-container .service-box {
+    .container #service-container-inside .service-box {
         margin: 30px 242px
     }
     .container #customer-social-1 #review-div {
