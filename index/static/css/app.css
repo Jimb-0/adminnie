@@ -972,6 +972,9 @@ footer #footer-link-ul{
   justify-content: space-around;
   padding:0;
 }
+footer #footer-link-ul a{
+    color:white;
+}
 footer #footer-link-box ul{
   padding-left:0;
 }
@@ -2227,6 +2230,9 @@ input::placeholder{
         height: 461px;
         width: unset
     }
+    #services-container h1:first-child{
+        color:#112d50;
+    }
     #labor-wrapper ul {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -2276,7 +2282,7 @@ input::placeholder{
         margin-bottom: 50px
     }
     #team-about-us #eight-yrs p {
-        padding: 0 0 0 37px
+        padding: 0;
     }
     #team-about-us #eight-yrs #josh-work-div {
         height: unset
@@ -2322,12 +2328,22 @@ input::placeholder{
     #quote_form .input-set .input-box{
       width:100%;
     }
+    #quotes-container #quote_form{
+        width:unset;
+    }
     footer {
         font-size: .5rem
     }
     .navbar .menu-bar {
         display: none
     }
+    #contact-container #contact-text{
+        padding:0;
+    }
+    #team-about-us #eight-yrs h2{
+        margin:0;
+    }
+
 }
 
 @media screen and (max-width: 820px) {
