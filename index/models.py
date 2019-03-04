@@ -57,7 +57,7 @@ class Insurance(models.Model):
     email = models.EmailField()
     from_zip = models.IntegerField()
     to_zip = models.IntegerField()
-    date = models.DateField()
+    date = models.DateField(default=datetime.now)
 
 class Comment(models.Model):
     your_name = models.CharField(max_length=100)

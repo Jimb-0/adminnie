@@ -30,10 +30,8 @@ screen and (min-width: 40em) {
     padding: 5px 15px;
     height: 275px;
     width: 300px;
-    background: white;
+    color: white;
     margin: 50px 50px;
-    -webkit-box-shadow: 20px 13px 30px -15px grey;
-    box-shadow: 20px 13px 30px -15px grey;
     border-radius: 10px;
 }
 
@@ -270,7 +268,7 @@ body ul {
 }
 
 .navbar a {
-    color: white
+    color: white;
 }
 
 .navbar #navbar-button {
@@ -827,7 +825,7 @@ body ul {
     }
 }
 #service-container-inside #first h1, #service-container-inside #second h1{
-  color:#112d50;
+  color:white;
 }
 #first img, #second img{
   height:150px;
@@ -1132,7 +1130,7 @@ footer .copywright, .bottom-line{
 }
 
 #back-to-top a {
-    color: white
+    color: white;
 }
 
 #back-to-top a:hover {
@@ -1299,7 +1297,7 @@ footer .copywright, .bottom-line{
     padding-top: 20px;
 }
 
-#quote_form #quote-submit-box{
+.submit-box{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1307,12 +1305,12 @@ footer .copywright, .bottom-line{
   justify-content: center;
   margin-top: 2rem;
 }
-#quote_form .input-set{
+.input-set{
   display:flex;
 }
-#quote-submit-input{
+.submit-input{
   border-radius: 5px;
-    letter-spacing: 1;
+  letter-spacing: 1;
 }
 input::placeholder{
   color:black;
@@ -1400,17 +1398,12 @@ input::placeholder{
 }
 
 #insurance-form-div {
-    background: #112d50;
     color: white;
-    border-radius: 3px;
     padding: 5px 0 20px 0;
-    margin: 20px auto
+    margin: 20px auto;
+    width:80%;
 }
 
-#insurance-form-div input,
-#insurance-form-div select {
-    border-radius: 3px
-}
 
 #insurance-form-div form {
     padding: 10px;
@@ -1442,23 +1435,28 @@ input::placeholder{
 #submit-insurance-div #insurance-submit {
     width: 200px
 }
-
-#team-div {
-    position: relative;
+#team-div{
+  position:relative;
+  height: 712.03px;
+}
+#team-div::before {
+    /*position: relative;
     height: 712.03px;
-    color: #f0f8ff
+    color: #f0f8ff */
+    content:"";
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background-image: url("https://image.ibb.co/kXdUEe/Markand_Chris.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 #team-div #team-pic {
     position: relative;
-    height: 712.03px;
-    width: 1264px
+    height: inherit;
 }
 
-#team-div #team-pic img {
-    width: 100%;
-    vertical-align: top
-}
 
 #team-div #team-pic:after {
     content: '\A';
@@ -1483,24 +1481,29 @@ input::placeholder{
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center
+    justify-content: center;
+    color: white;
+    flex-wrap: wrap;
+    height: inherit;
+    position: relative;
+    z-index:1;
 }
 
 #team-div #team-pic-text h1 {
     padding-left: 30px;
-    position: absolute;
     top: 0;
     font-family: "Book Antiqua";
     font-size: 2.5rem;
     font-weight: bold
 }
 
-#team-div #team-pic-text p {
-    position: absolute;
-    bottom: 50px;
+#team-div #team-pic-text #teamwork {
     padding: 0 265px;
     font-weight: bold;
-    font-size: 1.5rem
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    z-index:2;
 }
 
 #team-div #team-pic-text a {
@@ -1619,8 +1622,27 @@ input::placeholder{
 #contact-container #contact-text {
     padding: 0 115px
 }
+@media screen and (min-width: 1300px) and (max-width:1499px) {
+    #sign h1{
+      font-size:3.2rem;
+    }
+    .navbar a {
+      font-size:1.5rem;
 
-@media screen and (min-width: 1300px) {
+    }
+    .navbar .space{
+      width: 15rem;
+    }
+    .navbar .logo-container{
+      width:140px;
+    }
+
+
+
+
+
+}
+@media screen and (min-width: 1500px) {
   body p{
     font-size:1.5rem;
   }
@@ -1641,7 +1663,7 @@ input::placeholder{
       height:100px;
     }
     #navBar{
-      height:unset;
+      height:100px;
     }
     .navbar i {
         display: none
@@ -1650,7 +1672,16 @@ input::placeholder{
         width: 100%
     }
     .nav-inner{
-      width:100%;
+      width:100%; height:100%;
+    }
+    .navbar .logo-container{
+      width:150px;
+    }
+    .navbar .space{
+      width:44.25rem;
+    }
+    .nav-placeholder{
+      height:unset;
     }
     #landing{
       height:65vh;
@@ -1664,7 +1695,7 @@ input::placeholder{
       width:100%;
     }
     #landing .rapper h1{
-      font-size:4.4rem;
+      font-size:4.3rem;
     }
     #landing .rapper #landing-button{
       width:170px;
@@ -1703,7 +1734,7 @@ input::placeholder{
       font-size:3rem;
     }
     #steps{
-      height: 100vh;
+      height: unset;
     }
     .container #benefits #benefits-content #checklist-div{
       padding: 0 10rem 1rem 6rem;
@@ -1994,11 +2025,9 @@ input::placeholder{
         margin-left: 10px
     }
     #team-div {
-        height: unset
+        height: 500px;
     }
     #team-div #team-pic {
-        width: unset;
-        height: unset
     }
     #team-div #team-pic-text #teamwork {
         padding: 0 30px;
@@ -2048,6 +2077,12 @@ input::placeholder{
     #quote-box h1 {
         font-size: 1.5rem
     }
+    #footer-link-ul h2{
+          display:none;
+    }
+    footer #footer-link-ul{
+      flex-wrap: unset;
+    }
 }
 
 @media screen and (max-width: 820px) and (min-width: 80px) {
@@ -2073,7 +2108,7 @@ input::placeholder{
         font-size: 1.9rem
     }
     #sign #desc {
-        font-size: 1.3rem
+        font-size: 1.1rem
     }
     .navbar {
         padding: 0;
@@ -2128,6 +2163,9 @@ input::placeholder{
     #landing .rapper-container .rapper #landing-button {
         width: 116px;
         height: 41px
+    }
+    .rapper h1 br{
+      display: none;
     }
     .container {
         width: inherit
@@ -2242,6 +2280,7 @@ input::placeholder{
         height: unset;
         width: unset
     }
+    /* SERVICES */
     #services-top h1 {
         font-size: 2rem;
         height: unset
@@ -2268,17 +2307,15 @@ input::placeholder{
     #labor-wrapper ul li {
         margin: 20px
     }
+    /* THE TEAM */
     #team-div {
         position: relative;
-        height: unset
+        height: 300px;
     }
     #team-div #team-pic {
-        width: unset;
-        height: unset;
-        position: unset
     }
     #team-div #team-pic-text #teamwork {
-        padding: 0 30px;
+        padding: 0 30px 0;
         font-size: 1rem;
         bottom: 15px
     }
@@ -2292,7 +2329,7 @@ input::placeholder{
     }
     #team-div #team-pic-text span {
         text-decoration: underline;
-        color: #112d50
+        color: #112d50;
     }
     #team-about-us p {
         margin-top: 0;
@@ -2302,7 +2339,10 @@ input::placeholder{
         margin-bottom: 50px
     }
     #team-about-us #eight-yrs p {
-        padding: 0 0 0 37px
+        padding: 0;
+    }
+    #team-about-us #eight-yrs h2{
+      margin-left:0;
     }
     #team-about-us #eight-yrs #josh-work-div {
         height: unset
@@ -2311,14 +2351,19 @@ input::placeholder{
         height: unset
     }
     #team-about-us #second-par #cust-sat {
-        height: unset
+        height: unset;
+        float:right;
     }
     #team-about-us #second-par #cust-sat img {
         height: unset
     }
     #team-about-us #second-par p {
-        padding-right: 37px
+        padding-right: 0;
     }
+    #move-process{
+      padding:40px 0;
+    }
+    /* INSURANCE */
     #insurance-container {
         padding: 0;
         text-align: center
@@ -2332,6 +2377,7 @@ input::placeholder{
     #insurance-container #insurance-wrapper #insurance-requests p {
         font-size: 1rem
     }
+    /* QUOTES */
     #quotes-container h1 {
         font-size: 1.5rem
     }
@@ -2342,17 +2388,45 @@ input::placeholder{
     #quotes-container #quote-box {
         margin: 0
     }
-    #quote_form .input-set{
+    #quote_form .input-set, .input-set{
       display:unset;
     }
-    #quote_form .input-set .input-box{
+    #quote_form .input-set .input-box, .input-set .input-box{
       width:100%;
     }
-    footer {
-        font-size: .5rem
+    /* CONTACT PAGE */
+    #contact-container #contact-text{
+      padding:0;
     }
     .navbar .menu-bar {
         display: none
+    }
+    /* FOOTER */
+    footer {
+        font-size: .5rem
+    }
+
+    #footer_ul .footer-link-box, #footer_ul .mls-tag{
+      width:50%;
+    }
+    .navigation-list-2{
+      margin-left:20px;
+    }
+    .footer-logo-box{
+      display:none;
+    }
+    .footer-link-box ul{
+          padding: 0;
+
+    }
+    #footer-link-ul h2{
+          display:none;
+    }
+    footer #footer-link-ul{
+      flex-wrap: unset;
+    }
+    .copywright{
+      padding-left:0;
     }
 }
 
@@ -11884,7 +11958,7 @@ screen and (min-width: 64em) {
   margin:20px;
   width:50%;
 }
-#date-box{
+.date-box{
     display:flex;
     width:100%;
 }
@@ -11913,4 +11987,8 @@ screen and (min-width: 64em) {
 }
 #insure-box{
     margin:20px auto;
+}
+@media screen and (max-width:820px){
+  .input-box{
+    margin:unset;
 }
