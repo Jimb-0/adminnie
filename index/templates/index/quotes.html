@@ -1,0 +1,189 @@
+<!DOCTYPE.html>
+{% extends 'index/layout.html' %}
+
+{% block body_block %}
+
+{% load staticfiles %}
+
+
+<!--                                         CONTAINER                                     -->
+
+
+<div class="container-container">
+
+        <div class="container"  id="quotes-container">
+
+               <!--
+               what we want it to look like
+               <form action="/your-name/" method="post">
+                   <label for="your_name">Your Name:</label>
+                   <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+                   <input type="submit" value="OK">
+
+               </form>
+               -->
+
+
+                <div    style="width: 71%;margin: 0 auto;" >
+                   <h1 id="quote-header"> Get A Quote!</h1>
+                    <h2>
+                         Enter your information and get your quote. You will receive a quote within minutes. It takes less time than packing a box!
+                    </h2>
+                </div>
+
+
+					<div id="quote_form">
+              <!--   <div id="quote-box" class="columns large-6" style="margin:0 auto;" > -->
+
+									 <div style="width:100%;">
+									 <form method="POST" style="height:inherit">
+										  {% csrf_token %}
+										 {{ quotes.non_field_errors }}
+
+										 <div class="input-set" >
+
+										 		<div class="input-box">
+
+										    		 {{ quotes.name }}
+                             {{ quotes.name.errors }}
+												 </div>
+												 <div class="input-box">
+										     		 {{ quotes.email }}
+														 {{ quotes.email.errors }}
+										 			</div>
+
+										 </div>
+
+
+										 <div class="input-set">
+
+ 											 <div class="input-box">
+
+ 														{{ quotes.from_zip }}
+                            {{ quotes.from_zip.errors }}
+ 												</div>
+ 												<div class="input-box">
+
+ 														{{ quotes.to_zip }}
+                            {{ quotes.to_zip.errors }}
+ 												 </div>
+
+ 										</div>
+
+										<div class="input-set">
+
+											<div class="input-box">
+
+													 {{ quotes.flights_from }}
+                          {{ quotes.flights_from.errors }}
+											 </div>
+											 <div class="input-box">
+
+													 {{ quotes.flights_to }}
+                           {{ quotes.flights_to.errors }}
+												</div>
+
+									 </div>
+
+									 <div class="input-set">
+
+										 <div class="input-box" id="date-box">
+
+													<label for="quotes.date.id_date">Date of Move</label>
+													{{ quotes.date }}
+                          {{ quotes.date.errors }}
+											</div>
+
+									</div>
+
+									<div class="input-set">
+
+										<div class="input-box">
+
+												 {{ quotes.from_property }}
+                         {{ quotes.from_property.errors }}
+										 </div>
+										 <div class="input-box">
+
+												 {{ quotes.truck_size }}
+                         {{ quotes.truck_size.errors }}
+											</div>
+
+								 </div>
+
+								 <div class="input-set">
+
+									 <div class="input-box" id="insure-box">
+
+												{{ quotes.insurance }}
+                        {{ quotes.insurance.errors }}
+										</div>
+
+								</div>
+
+								<div class="input-set">
+
+									<div class="input-box">
+
+											 {{ quotes.referral }}
+                       {{ quotes.referral.errors }}
+									 </div>
+									 <div class="input-box">
+
+											 {{ quotes.other }}
+                       {{ quotes.other.errors }}
+										</div>
+
+							 </div>
+
+							 <div class="input-set">
+
+								 <div class="input-box" id="reff">
+
+											{{ quotes.reff_code }}
+                      {{ quotes.reff_code.errors }}
+									</div>
+
+							</div>
+
+
+
+									 <div id="quote-submit-box">
+
+								 	 		<input type="submit" id="quote-submit-input" value="Submit" class="columns large-3 small-4 button" >
+
+								  </div>
+
+									 </form>
+									 </div>
+
+            <div class="clear"></div>
+
+        <!--</div>-->
+
+
+
+   </div>
+</div>
+
+    </div>
+
+
+
+
+
+    <div id="back-to-top">
+       <a href="#" title="back-to-top">
+        <i class="fi-arrow-up"></i>
+        </a>
+    </div>
+
+
+  {% endblock %}
+            <!--Sticky Navbar-->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  {% extends 'index/layout.html' %}
+  {% load staticfiles %}
+
+  {% block body_block %}
+{{ form.non_field_errors }}
+<div style="display:flex; flex-row:row;">
+<div class="fieldWrappe">
+    {{ form.your_name.errors }}
+    <label for="{{ form.your_name.id_for_label }}">Name:</label>
+    {{ form.your_name }}
+</div>
+<div class="fieldWrappe">
+    {{ form.email.errors }}
+    <label for="{{ form.email.id_for_label }}">Your Email:</label>
+    {{ form.email }}
+</div>
+</div>
+<div class="fieldWrappe">
+    {{ form.num.errors }}
+    <label for="{{ form.num.id_for_label }}">Your Number:</label>
+    {{ form.num }}
+</div>
+
+{% endblock %}
+
+
+</body>
+</html>

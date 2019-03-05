@@ -1,0 +1,67 @@
+<!DOCTYPE.html>
+{% extends 'index/layout.html' %}
+
+{% block body_block %}
+
+{% load staticfiles %}
+
+  <div class="container-container">
+      <div class="container" id="contact-container">
+
+
+
+
+          <div id="contact-form-div"class="columns large-6 medium-6 small-12">
+
+                 <div class="columns large-12">
+									       <h1 style="text-align:left; color:white; padding-left:12px;">Contact Us</h1>
+                  <form method="POST" >
+										{% csrf_token %}
+										{{ contact_us }}
+										<input type="submit" class="button" value="Submit" style="width:150px;">
+                  </form>
+                  </div>
+
+
+          </div>
+
+          <div id="contact-text" class="columns large-6 medium-6 ">
+             <h1>Drop Us a Line!</h1>
+             <p>We'd love to hear any questions or comments you have about moving! Please fill out the form or call us @ 646-820-6683.</p>
+
+
+              <h2>Office Hours</h2>
+              <p>
+                  Monday - Friday : 9AM - 5PM
+                  <br>
+                  Saturday &amp; Sunday : 10AM-4PM
+
+
+              </p>
+
+          </div>
+          <div>
+            <img src="{% static 'index/pics/NM-logo-circle-b.svg' %}" alt="" style="height: 300px;width: 300px;">
+          </div>
+
+
+
+
+      </div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+</body>
+</html>
