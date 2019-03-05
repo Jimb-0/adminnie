@@ -751,7 +751,18 @@ body ul {
     margin:14px;
 }
 
+<<<<<<< HEAD
 #service-container-inside #first {
+=======
+<<<<<<< HEAD
+#services-container #first h1, #services-container #second h1{
+  color:#112d50;
+}
+#services-container #first {
+=======
+#service-container-inside #first {
+>>>>>>> 5820c0819e41755d6a7ba16072d0a5ece7f3e4be
+>>>>>>> parent of 0bc3e28... Merge https://github.com/Jimb-0/nomadsite
     margin-top: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -825,7 +836,11 @@ body ul {
     }
 }
 #service-container-inside #first h1, #service-container-inside #second h1{
+<<<<<<< HEAD
   color:white;
+=======
+  color:#112d50;
+>>>>>>> parent of 0bc3e28... Merge https://github.com/Jimb-0/nomadsite
 }
 #first img, #second img{
   height:150px;
@@ -987,8 +1002,18 @@ footer #footer-link-ul{
   flex-wrap: wrap;
   padding:0;
 }
+<<<<<<< HEAD
 footer #footer-link-ul h2{
   width:100%;
+=======
+<<<<<<< HEAD
+footer #footer-link-ul a{
+    color:white;
+=======
+footer #footer-link-ul h2{
+  width:100%;
+>>>>>>> 5820c0819e41755d6a7ba16072d0a5ece7f3e4be
+>>>>>>> parent of 0bc3e28... Merge https://github.com/Jimb-0/nomadsite
 }
 footer #footer-link-box ul{
   padding-left:0;
