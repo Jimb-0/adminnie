@@ -53,7 +53,14 @@ class Insurance_form(forms.ModelForm):
     class Meta:
         model = Insurance
         fields = '__all__'
+        widgets = {
+        'name' : forms.TextInput(attrs={'class': 'form_inputs','placeholder':'Enter Your Name'},),
+        'email' : forms.TextInput(attrs={'class': 'form_inputs','placeholder':'Enter Your Email'}),
+        'from_zip' : forms.TextInput(attrs={'class': 'form_inputs','placeholder':'From Zip Code'}),
+        'to_zip' : forms.TextInput(attrs={'class': 'form_inputs','placeholder':'To Zip Code'}),
+        'date' : forms.SelectDateWidget(attrs={'class': 'form_inputs','placeholder':'Moving Date'}),
 
+        }
 class Contact_form(forms.ModelForm):
     #cc_myself = forms.BooleanField(required=False)
 
