@@ -9,25 +9,77 @@
 
     <div class="container" id="insurance-container">
 
-               <h1 style="font-size:3rem; text-align:center;">Insurance</h1>
-
                 <div id="insurance-wrapper" >
-                    <div id="insurance-requests">
-                       <div class="columns large-6 medium-12">
-                       <img src="{% static 'index/pics/Cityview.JPG' %}" class="columns large-6 medium-6 show-for-medium-only">
-                       <img src="{% static 'index/pics/Cityview.JPG' %}" class="columns large-6 medium-6 show-for-small-only">
-
-                        <h1> Insurance Requests</h1>
-                            <p >If you're moving into/out of a building with elevators, marble walls
-                            or glass floors, your building may require your moving company to have insurance…don’t worry, we have it. As we are dedicated to processing each insurance request thoroughly, please submit your request at least 3-5 days before your building’s deadline. When you have already booked your move, you can submit your insurance request by emailing <span><em>nomadservicesny@gmail.com </em></span>a sample of the building’s COI (See Below).
 
 
+                        <!-- INSURANCE FORM -->
+                         <h1 style="text-align: center; padding-top:30px;">Insurance Requests</h1>
 
-                             </p>
+                        <div id="insurance-form-div" >
+
+                            <form  action="#" method="POST" id="insurance-form" autcomplete="on">
+                              {% csrf_token %}
+
+                              <div class="input-set" >
+
+                                 <div class="input-box">
+
+                                      {{ insurance_stuff.name }}
+                                      {{ insurance_stuff.name.errors }}
+                                  </div>
+                                  <div class="input-box">
+                                      {{ insurance_stuff.email }}
+                                      {{ insurance_stuff.email.errors }}
+                                   </div>
+
+                              </div>
+                              <div class="input-set" >
+
+                                 <div class="input-box">
+
+                                      {{ insurance_stuff.from_zip }}
+                                      {{ insurance_stuff.from_zip.errors }}
+                                  </div>
+                                  <div class="input-box">
+                                      {{ insurance_stuff.to_zip }}
+                                      {{ insurance_stuff.to_zip.errors }}
+                                   </div>
+
+                              </div>
+                              <div class="input-set" >
+
+                                 <div class="input-box date-box">
+
+                                      {{ insurance_stuff.date }}
+                                      {{ insurance_stuff.date.errors }}
+                                  </div>
+
+                              </div>
+
+                              <div class="submit-box">
+                                  <input type="submit" class="columns large-3 small-4 button submit-input" value="Submit" style="border-radius:5px;">
+                              </div>
+                            </form>
                         </div>
-                         <img src="{% static 'index/pics/Cityview.JPG' %}" class="columns large-6 show-for-small show-for-large">
-                </div>
-                        <div class="clear"></div>
+            <!-- Insurance Explanation -->
+                        <div id="insurance-requests">
+                           <div class="columns large-6 medium-12">
+                           <img src="{% static 'index/pics/Cityview.JPG' %}" class="columns large-6 medium-6 show-for-medium-only">
+                           <img src="{% static 'index/pics/Cityview.JPG' %}" class="columns large-6 medium-6 show-for-small-only">
+
+                            <h1> Insurance Requests</h1>
+                                <p >If you're moving into/out of a building with elevators, marble walls
+                                or glass floors, your building may require your moving company to have insurance…don’t worry, we have it. As we are dedicated to processing each insurance request thoroughly, please submit your request at least 3-5 days before your building’s deadline. When you have already booked your move, you can submit your insurance request by emailing <span><em>nomadservicesny@gmail.com </em></span>a sample of the building’s COI (See Below).
+
+
+
+                                 </p>
+                            </div>
+                             <img src="{% static 'index/pics/Cityview.JPG' %}" class="columns large-6 show-for-small show-for-large">
+                    </div>
+                            <div class="clear"></div>
+                        <!-- COI EXPLAINED -->
+
             <div id="coi-wrapper">
 
                <img src="{% static 'index/pics/calculator.jpg' %}" class="columns large-6 show-for-large" style="float:right">
@@ -37,6 +89,9 @@
                    <img src="{% static 'index/pics/calculator.jpg' %}" class="columns large-6 medium-6 show-for-medium-only">
 
             <div>
+
+
+
                 <div id="cert">
 
 
@@ -69,95 +124,9 @@
         </div>
     </div>
 
-                 <h1 style="text-align: center;">Insurance Form</h1>
-                 <div class="columns large-2"> .</div>
-            <div id="insurance-form-div" class="columns large-8" >
 
-                <form  action="#" method="POST" id="insurance-form" autcomplete="on">
-									{% csrf_token %}
-									{{ insurance_stuff }}
-									<input type="submit" class="button" value="Submit">
-<!--
-										<div class="columns large-7">
-                        <label> Name </label>
-                        <input type="text" name="name" placeholder="Your Name: " required>
-                        </div>
 
-                        <div class="columns large-12" id="insurance-contact">
 
-                                <div class="columns large-6"  >
-                                    <label>Phone </label>
-                                    <input type="tel" name="tel" placeholder="555-555-5555" required>
-                                </div>
-
-                                <div class="columns large-6">
-                                    <label>Email </label>
-                                    <input type="email" name="email" placeholder="email@example.com" required>
-                                </div>
-
-                        </div>
-                        <div class="columns large-6">
-
-                                <h1>Moving From:</h1>
-                                <label>City</label>
-                                <input type="text" name="city" placeholder="New York City">
-                                <label>Zip </label>
-                                <input type="number" name="number" placeholder="">
-
-                                <select form="quoteform">
-                                    <option value="1 flight">1 flight or less</option>
-                                    <option value="2 flights">2 flights</option>
-                                    <option value="3 flights">3 flights</option>
-                                    <option value="4 flights">4 flights</option>
-                                    <option value="5 flights">5 flights +</option>
-                                </select>
-
-                                <label>Does this location require insurance ?</label>
-                                <input type="radio" value="Yes" name="yes"> Yes
-                                <input type="radio" value="No" name="no"> No
-
-                        </div>
-
-                    <div class="columns large-6">
-
-                            <h1>Moving To:</h1>
-                            <label>City</label>
-                            <input type="text" name="city" placeholder="New York City">
-                            <label>Zip </label>
-                            <input type="number" name="number" placeholder="">
-                            <select form="quoteform">
-                                <option value="1 flight">1 flight or less</option>
-                                <option value="2 flights">2 flights</option>
-                                <option value="3 flight">3 flights</option>
-                                <option value="4 flight">4 flights</option>
-                                <option value="1 flight">5 flights +</option>
-                            </select>
-                            <label>Does this location require insurance ?</label>
-                            <input type="radio" value="Yes" name="yes"> Yes
-                            <input type="radio" value="No" name="no"> No
-                    </div>
-                    <div class="clear"></div>
-                    <br>
-
-                    <div class="columns large-12">
-                           <div class="columns large-5">
-                            <label>Date of Move</label>
-                            <input type="date" name="date">
-                            </div>
-                            <div class="clear"></div>
-
-                            <p>If your building has already provided you with a <a href="#cert" style="color:white; text-decoration: underline;">Certificate of Insurance</a> please upload it here</p>
-
-                                 <div id="submit-insurance-div">
-                                        <input id="insurance-submit" class="button" type="submit" value="Submit" >
-                                </div>
-
-                      </div>
-										-->
-                </form>
-            </div>
-
-            <div class="columns large-2"></div>
             <div class="clear"></div>
     </div>
 </div>

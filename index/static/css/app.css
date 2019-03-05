@@ -25,26 +25,24 @@ screen and (min-width: 40em) {
 }
 
 .box,
-#services-container .service-box,
+#service-container-inside .service-box,
 #labor-wrapper li {
     padding: 5px 15px;
     height: 275px;
     width: 300px;
-    background: white;
+    color: white;
     margin: 50px 50px;
-    -webkit-box-shadow: 20px 13px 30px -15px grey;
-    box-shadow: 20px 13px 30px -15px grey;
     border-radius: 10px;
 }
 
 .box h1,
-#services-container .service-box h1,
+#service-container-inside .service-box h1,
 #labor-wrapper li h1 {
     font-family: "Book Antiqua"
 }
 
 .box i,
-#services-container .service-box i,
+#service-container-inside .service-box i,
 #labor-wrapper li i {
     font-size: 60px;
     color: #112d50;
@@ -68,14 +66,14 @@ body {
 }
 
 body a {
-    color: #112d50;
+    color: white;
     -webkit-transition: color .5s ease-in;
     transition: color .5s ease-in;
     text-decoration: none
 }
 
 body a:hover {
-    color: #2d77d2
+    color: #2d77d2;
 }
 
 body ul {
@@ -270,7 +268,7 @@ body ul {
 }
 
 .navbar a {
-    color: white
+    color: white;
 }
 
 .navbar #navbar-button {
@@ -280,17 +278,16 @@ body ul {
     height: 42px;
     width: 150px;
     border-radius: 3px;
-    background: black;
-    border: 1px white solid
+    background:  #2d77d2;
 }
 
 .navbar #navbar-button:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
-    border: 2px #112d50 solid;
+    border: 2px white solid;
     border-radius: 3px;
-    background:#112d50;
+    background:black;
 }
 
 .navbar {
@@ -613,7 +610,6 @@ body ul {
     margin-top: 150px;
     padding: 80px 0;
     position: relative;
-    height: 850.4px;
     float: left
 }
 
@@ -690,6 +686,7 @@ body ul {
 
 #steps .invisible-nums {
     position: absolute;
+    display:none;
     font-size: 400;
     z-index: -50;
     opacity: .05;
@@ -717,8 +714,21 @@ body ul {
     height: 100%;
     z-index: -100
 }
-
-#services-container {
+#services-container{
+    position:relative;
+}
+#services-container::before{
+    content:"";
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background-image: url("/static/index/pics/chris-pods.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:blur(2px);
+}
+#service-container-inside {
+    position:relative;
     margin:0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -728,37 +738,34 @@ body ul {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background-image: url("/static/index/pics/chris-pods.jpg");
-    background-repeat: no-repeat;
+    width: 70%;
+    margin: 0 auto;
 }
-#services-container h1:first-child {
+#service-container-inside h1:first-child {
   margin-bottom:20px;
   color:white;
 }
 
-#services-container h1 {
+#service-container-inside h1 {
     color: #112d50;
     margin:14px;
 }
 
-#services-container #first h1, #services-container #second h1{
-  color:#112d50;
-}
-#services-container #first {
+#service-container-inside #first {
     margin-top: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex
 }
 
-#services-container #second {
+#service-container-inside #second {
     margin-top: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex
 }
 
-#services-container #first div:hover {
+#service-container-inside #first div:hover {
     background: #112d50;
     color: #f0f8ff;
     cursor: hand;
@@ -766,11 +773,11 @@ body ul {
     transition: background .2s linear
 }
 
-#services-container #first div:hover h1 {
+#service-container-inside #first div:hover h1 {
     color: #f0f8ff
 }
 
-#services-container #second div:hover {
+#service-container-inside #second div:hover {
     background: #112d50;
     color: #f0f8ff;
     cursor: hand;
@@ -778,11 +785,11 @@ body ul {
     transition: background .2s linear
 }
 
-#services-container #second div:hover h1 {
+#service-container-inside #second div:hover h1 {
     color: #f0f8ff
 }
 
-#services-container .service-box:hover {
+#service-container-inside .service-box:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
@@ -817,8 +824,8 @@ body ul {
         scale: 1.2
     }
 }
-#services-container #first h1, #services-container #second h1{
-  color:#112d50;
+#service-container-inside #first h1, #service-container-inside #second h1{
+  color:white;
 }
 #first img, #second img{
   height:150px;
@@ -928,7 +935,6 @@ body ul {
 }
 
 #service-area-head h1 {
-    font-family: "Book Antiqua";
     font-size: 3em;
 }
 
@@ -944,7 +950,7 @@ body ul {
 #map-div img {
     height: 600px;
     width: 600px;
-    border-radius: 3px
+    border-radius: 20px
 }
 
 .nomad_foot {
@@ -959,24 +965,39 @@ body ul {
     background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzI4MjgyOCI+PC9yZWN0Pgo8Y2lyY2xlIGN4PSIzIiBjeT0iNC4zIiByPSIxLjgiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIzIiBjeT0iMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+CjxjaXJjbGUgY3g9IjEwLjUiIGN5PSIxMi41IiByPSIxLjkiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIxMC41IiBjeT0iMTEuMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+Cjwvc3ZnPg==");
 
 }
+footer #footer-link-ul a{
+  color:white;
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+footer #footer-link-ul a:hover{
+  color:#2d77d2;
+}
+
 footer #footer_ul{
   display:flex;
   flex-wrap:wrap;
   width:90%;
   padding:0 10px;
   margin-bottom: 0;
-  margin:0 auto;
+
 }
 footer #footer-link-ul{
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
   padding:0;
 }
-footer #footer-link-ul a{
-    color:white;
+footer #footer-link-ul h2{
+  width:100%;
 }
 footer #footer-link-box ul{
   padding-left:0;
+}
+footer #footer-link-box a{
+  color:white;
+}
+.navigation-list-2{
+  margin-left: 3.1rem;
 }
 #footer_ul .footer-logo-box, #footer_ul .footer-link-box, #footer_ul .mls-tag{
     width:33%;
@@ -1109,7 +1130,7 @@ footer .copywright, .bottom-line{
 }
 
 #back-to-top a {
-    color: white
+    color: white;
 }
 
 #back-to-top a:hover {
@@ -1276,7 +1297,7 @@ footer .copywright, .bottom-line{
     padding-top: 20px;
 }
 
-#quote_form #quote-submit-box{
+.submit-box{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1284,12 +1305,12 @@ footer .copywright, .bottom-line{
   justify-content: center;
   margin-top: 2rem;
 }
-#quote_form .input-set{
+.input-set{
   display:flex;
 }
-#quote-submit-input{
+.submit-input{
   border-radius: 5px;
-    letter-spacing: 1;
+  letter-spacing: 1;
 }
 input::placeholder{
   color:black;
@@ -1377,17 +1398,12 @@ input::placeholder{
 }
 
 #insurance-form-div {
-    background: #112d50;
     color: white;
-    border-radius: 3px;
     padding: 5px 0 20px 0;
-    margin: 20px auto
+    margin: 20px auto;
+    width:80%;
 }
 
-#insurance-form-div input,
-#insurance-form-div select {
-    border-radius: 3px
-}
 
 #insurance-form-div form {
     padding: 10px;
@@ -1419,23 +1435,28 @@ input::placeholder{
 #submit-insurance-div #insurance-submit {
     width: 200px
 }
-
-#team-div {
-    position: relative;
+#team-div{
+  position:relative;
+  height: 712.03px;
+}
+#team-div::before {
+    /*position: relative;
     height: 712.03px;
-    color: #f0f8ff
+    color: #f0f8ff */
+    content:"";
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background-image: url("https://image.ibb.co/kXdUEe/Markand_Chris.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 #team-div #team-pic {
     position: relative;
-    height: 712.03px;
-    width: 1264px
+    height: inherit;
 }
 
-#team-div #team-pic img {
-    width: 100%;
-    vertical-align: top
-}
 
 #team-div #team-pic:after {
     content: '\A';
@@ -1460,24 +1481,29 @@ input::placeholder{
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center
+    justify-content: center;
+    color: white;
+    flex-wrap: wrap;
+    height: inherit;
+    position: relative;
+    z-index:1;
 }
 
 #team-div #team-pic-text h1 {
     padding-left: 30px;
-    position: absolute;
     top: 0;
     font-family: "Book Antiqua";
     font-size: 2.5rem;
     font-weight: bold
 }
 
-#team-div #team-pic-text p {
-    position: absolute;
-    bottom: 50px;
+#team-div #team-pic-text #teamwork {
     padding: 0 265px;
     font-weight: bold;
-    font-size: 1.5rem
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    z-index:2;
 }
 
 #team-div #team-pic-text a {
@@ -1596,8 +1622,27 @@ input::placeholder{
 #contact-container #contact-text {
     padding: 0 115px
 }
+@media screen and (min-width: 1300px) and (max-width:1499px) {
+    #sign h1{
+      font-size:3.2rem;
+    }
+    .navbar a {
+      font-size:1.5rem;
 
-@media screen and (min-width: 1300px) {
+    }
+    .navbar .space{
+      width: 15rem;
+    }
+    .navbar .logo-container{
+      width:140px;
+    }
+
+
+
+
+
+}
+@media screen and (min-width: 1500px) {
   body p{
     font-size:1.5rem;
   }
@@ -1618,7 +1663,7 @@ input::placeholder{
       height:100px;
     }
     #navBar{
-      height:unset;
+      height:100px;
     }
     .navbar i {
         display: none
@@ -1627,7 +1672,16 @@ input::placeholder{
         width: 100%
     }
     .nav-inner{
-      width:100%;
+      width:100%; height:100%;
+    }
+    .navbar .logo-container{
+      width:150px;
+    }
+    .navbar .space{
+      width:44.25rem;
+    }
+    .nav-placeholder{
+      height:unset;
     }
     #landing{
       height:65vh;
@@ -1641,7 +1695,7 @@ input::placeholder{
       width:100%;
     }
     #landing .rapper h1{
-      font-size:4.4rem;
+      font-size:4.3rem;
     }
     #landing .rapper #landing-button{
       width:170px;
@@ -1680,7 +1734,7 @@ input::placeholder{
       font-size:3rem;
     }
     #steps{
-      height: 100vh;
+      height: unset;
     }
     .container #benefits #benefits-content #checklist-div{
       padding: 0 10rem 1rem 6rem;
@@ -1691,30 +1745,30 @@ input::placeholder{
     #steps #ul-container ul li{
       padding:0 73px;
     }
-    #services-container h1:first-child{
+    #service-container-inside h1:first-child{
       width:100%;
       font-size:3rem;
     }
-    #services-container #first{
+    #service-container-inside #first{
       width:100%;
       justify-content: center;
     }
-    #services-container #second{
+    #service-container-inside #second{
       width:100%;
       justify-content: center;
     }
-    #services-container .service-box{
+    #service-container-inside .service-box{
       height:320px;
       width:400px;
     }
-    #services-container .service-box img{
+    #service-container-inside .service-box img{
       height:200px;
       width:200px;
     }
     .service-box h1{
 
     }
-    #services-container .service-box:hover{
+    #service-container-inside .service-box:hover{
       transform:scale(1.1)
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -1971,11 +2025,9 @@ input::placeholder{
         margin-left: 10px
     }
     #team-div {
-        height: unset
+        height: 500px;
     }
     #team-div #team-pic {
-        width: unset;
-        height: unset
     }
     #team-div #team-pic-text #teamwork {
         padding: 0 30px;
@@ -2025,6 +2077,12 @@ input::placeholder{
     #quote-box h1 {
         font-size: 1.5rem
     }
+    #footer-link-ul h2{
+          display:none;
+    }
+    footer #footer-link-ul{
+      flex-wrap: unset;
+    }
 }
 
 @media screen and (max-width: 820px) and (min-width: 80px) {
@@ -2050,7 +2108,7 @@ input::placeholder{
         font-size: 1.9rem
     }
     #sign #desc {
-        font-size: 1.3rem
+        font-size: 1.1rem
     }
     .navbar {
         padding: 0;
@@ -2105,6 +2163,9 @@ input::placeholder{
     #landing .rapper-container .rapper #landing-button {
         width: 116px;
         height: 41px
+    }
+    .rapper h1 br{
+      display: none;
     }
     .container {
         width: inherit
@@ -2183,13 +2244,13 @@ input::placeholder{
         right: 129px;
         bottom: 18px
     }
-    .container #services-container {
+    .container #service-container-inside {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
         background-image: url(cust-cheese.jpg);
     }
-    .container #services-container .service-box {
+    .container #service-container-inside .service-box {
         margin: 30px 242px
     }
     .container #customer-social-1 #review-div {
@@ -2219,6 +2280,7 @@ input::placeholder{
         height: unset;
         width: unset
     }
+    /* SERVICES */
     #services-top h1 {
         font-size: 2rem;
         height: unset
@@ -2229,9 +2291,6 @@ input::placeholder{
     #services-top #service-labor-pic img {
         height: 461px;
         width: unset
-    }
-    #services-container h1:first-child{
-        color:#112d50;
     }
     #labor-wrapper ul {
         -webkit-box-orient: horizontal;
@@ -2248,17 +2307,15 @@ input::placeholder{
     #labor-wrapper ul li {
         margin: 20px
     }
+    /* THE TEAM */
     #team-div {
         position: relative;
-        height: unset
+        height: 300px;
     }
     #team-div #team-pic {
-        width: unset;
-        height: unset;
-        position: unset
     }
     #team-div #team-pic-text #teamwork {
-        padding: 0 30px;
+        padding: 0 30px 0;
         font-size: 1rem;
         bottom: 15px
     }
@@ -2272,7 +2329,7 @@ input::placeholder{
     }
     #team-div #team-pic-text span {
         text-decoration: underline;
-        color: #112d50
+        color: #112d50;
     }
     #team-about-us p {
         margin-top: 0;
@@ -2284,6 +2341,9 @@ input::placeholder{
     #team-about-us #eight-yrs p {
         padding: 0;
     }
+    #team-about-us #eight-yrs h2{
+      margin-left:0;
+    }
     #team-about-us #eight-yrs #josh-work-div {
         height: unset
     }
@@ -2291,14 +2351,19 @@ input::placeholder{
         height: unset
     }
     #team-about-us #second-par #cust-sat {
-        height: unset
+        height: unset;
+        float:right;
     }
     #team-about-us #second-par #cust-sat img {
         height: unset
     }
     #team-about-us #second-par p {
-        padding-right: 37px
+        padding-right: 0;
     }
+    #move-process{
+      padding:40px 0;
+    }
+    /* INSURANCE */
     #insurance-container {
         padding: 0;
         text-align: center
@@ -2312,6 +2377,7 @@ input::placeholder{
     #insurance-container #insurance-wrapper #insurance-requests p {
         font-size: 1rem
     }
+    /* QUOTES */
     #quotes-container h1 {
         font-size: 1.5rem
     }
@@ -2322,28 +2388,46 @@ input::placeholder{
     #quotes-container #quote-box {
         margin: 0
     }
-    #quote_form .input-set{
+    #quote_form .input-set, .input-set{
       display:unset;
     }
-    #quote_form .input-set .input-box{
+    #quote_form .input-set .input-box, .input-set .input-box{
       width:100%;
     }
-    #quotes-container #quote_form{
-        width:unset;
-    }
-    footer {
-        font-size: .5rem
+    /* CONTACT PAGE */
+    #contact-container #contact-text{
+      padding:0;
     }
     .navbar .menu-bar {
         display: none
     }
-    #contact-container #contact-text{
-        padding:0;
-    }
-    #team-about-us #eight-yrs h2{
-        margin:0;
+    /* FOOTER */
+    footer {
+        font-size: .5rem
     }
 
+    #footer_ul .footer-link-box, #footer_ul .mls-tag{
+      width:50%;
+    }
+    .navigation-list-2{
+      margin-left:20px;
+    }
+    .footer-logo-box{
+      display:none;
+    }
+    .footer-link-box ul{
+          padding: 0;
+
+    }
+    #footer-link-ul h2{
+          display:none;
+    }
+    footer #footer-link-ul{
+      flex-wrap: unset;
+    }
+    .copywright{
+      padding-left:0;
+    }
 }
 
 @media screen and (max-width: 820px) {
@@ -11874,7 +11958,7 @@ screen and (min-width: 64em) {
   margin:20px;
   width:50%;
 }
-#date-box{
+.date-box{
     display:flex;
     width:100%;
 }
@@ -11903,4 +11987,8 @@ screen and (min-width: 64em) {
 }
 #insure-box{
     margin:20px auto;
+}
+@media screen and (max-width:820px){
+  .input-box{
+    margin:unset;
 }
