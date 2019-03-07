@@ -262,7 +262,7 @@ body ul {
     align-items: center
 }
 
-.navbar .menu-bar ul a:nth-child(5) {
+.navbar .menu-bar ul a:nth-child(6) {
     border-style: none;
     padding-right: 0
 }
@@ -1011,7 +1011,7 @@ footer #footer-link-box a{
 }
 #footer_ul #footer-img-box img{
   height:120px;
-  width:150px;
+  width:80%;
 }
 .class-link a{
   color:white;
@@ -2251,7 +2251,7 @@ input::placeholder{
         background-image: url(cust-cheese.jpg);
     }
     .container #service-container-inside .service-box {
-        margin: 30px 242px
+        margin: 0 auto;
     }
     .container #customer-social-1 #review-div {
         -webkit-box-orient: horizontal;
@@ -2413,10 +2413,10 @@ input::placeholder{
       margin-left:20px;
     }
     .footer-logo-box{
-      display:none;
     }
     .footer-link-box ul{
           padding: 0;
+          font-size:.7rem;
 
     }
     #footer-link-ul h2{

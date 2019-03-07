@@ -26,9 +26,9 @@ print(STATICFILES_DIR)
 SECRET_KEY = 'w4-rm@3xyr38r19z58gs&65!@qkghjer-%ee1p2n_2y!3vu_y6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
