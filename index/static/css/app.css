@@ -28,7 +28,6 @@ screen and (min-width: 40em) {
 #service-container-inside .service-box,
 #labor-wrapper li {
     padding: 5px 15px;
-    height: 275px;
     width: 300px;
     color: white;
     margin: 50px 50px;
@@ -155,7 +154,8 @@ body ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 1100px
+    width: 74.75em;
+    margin:0 auto;
 }
 
 .fixed {
@@ -167,7 +167,7 @@ body ul {
 .navbar {
     background: black;
     color: #fff;
-    margin-top: 0;
+    margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -177,7 +177,6 @@ body ul {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 0 77px;
     z-index: 20000;
     height: 70px;
     -webkit-box-shadow: 2px 2px 10px -2px black;
@@ -186,7 +185,7 @@ body ul {
 
 .navbar .fixed-bar {
     height: inherit;
-    width: 1100px;
+    width: inherit;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -262,7 +261,7 @@ body ul {
     align-items: center
 }
 
-.navbar .menu-bar ul a:nth-child(5) {
+.navbar .menu-bar ul a:nth-child(6) {
     border-style: none;
     padding-right: 0
 }
@@ -445,7 +444,7 @@ body ul {
 }
 
 .prev {
-    left: -237px
+    left: -13.1em;
 }
 
 .next {
@@ -632,10 +631,13 @@ body ul {
     margin: 0;
     width: 33%
 }
-
+.steps-icons{
+    width: 8.5em;
+    height: 7.5em;
+}
 #steps p {
-    padding: 10px 30px;
-    text-align: left
+    padding: 0 30px;
+    text-align: center;
 }
 
 #steps .steps-desc {
@@ -653,9 +655,8 @@ body ul {
 
 #steps strong {
     font-family: "Book Antiqua";
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding: 0;
-    text-align: left
 }
 
 #steps #ul-container {
@@ -705,6 +706,9 @@ body ul {
 #steps #three {
     right: 90px
 }
+#clipboard-icon{
+    width:7em;
+}
 
 #steps svg {
     position: absolute;
@@ -716,18 +720,32 @@ body ul {
 }
 #services-container{
     position:relative;
+    overflow:hidden;
 }
 #services-container::before{
     content:"";
     position:absolute;
     top:0; left:0;
     width:100%; height:100%;
-    background-image: url("/static/index/pics/chris-pods.jpg");
+    background-image: url("/static/index/pics/loadjob6.jpg");
     background-repeat: no-repeat;
     background-size:cover;
-    filter:blur(2px);
+    background-position: center;
+}
+#services-container::after{
+  content: '\A';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0.6;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
 #service-container-inside {
+
     position:relative;
     margin:0;
     display: -webkit-box;
@@ -740,6 +758,7 @@ body ul {
     justify-content: center;
     width: 70%;
     margin: 0 auto;
+    z-index:1;
 }
 #service-container-inside h1:first-child {
   margin-bottom:20px;
@@ -830,7 +849,6 @@ body ul {
 #first img, #second img{
   height:150px;
   width:150px;
-  background:white;
   border-radius:50%;
 }
 #customer-social-container {
@@ -872,6 +890,7 @@ body ul {
 }
 
 #review-div .blockquote {
+  border-radius:5px;
     padding: 10px;
     border: 1px grey solid;
     width: 300px;
@@ -896,12 +915,15 @@ body ul {
 .no-marg {
     margin: 0
 }
-
+#partners-div{
+  background:#f2f2f2;
+}
 #partners-div #partner-logos {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 110px 0;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -909,11 +931,19 @@ body ul {
     -ms-flex-align: center;
     align-items: center
 }
+#partners-div #partner-logos h1{
+  font-weight: 500;
+  width:100%;
+}
 
 #partners-div #partner-logos img {
+
     padding: 0 20px
 }
 
+#partners-div #partner-logos #ms-logo {
+  height:6.25em;
+}
 #partners-div #partner-logos #penske-logo {
     height: 100px;
     width: 200px;
@@ -922,12 +952,9 @@ body ul {
 
 #partners-div #partner-logos #uhaul-logo {
     height: 90px;
-    width: 300px;
-    border-radius: 6px
+    width: 17.5em;
 }
 
-#partners-div #partner-logos #ms-logo {
-}
 
 #service-area-head {
     text-align: center;
@@ -948,8 +975,8 @@ body ul {
 }
 
 #map-div img {
-    height: 600px;
-    width: 600px;
+    height: 37.5em;
+    width: 37.5em;
     border-radius: 20px
 }
 
@@ -1011,7 +1038,7 @@ footer #footer-link-box a{
 }
 #footer_ul #footer-img-box img{
   height:120px;
-  width:150px;
+  width:80%;
 }
 .class-link a{
   color:white;
@@ -1217,8 +1244,7 @@ footer .copywright, .bottom-line{
 
 #labor-wrapper li {
     overflow: hidden;
-    position: relative;
-    height:350px;
+    position: relative; 
     background: #112d50;
     color: white;
 }
@@ -1321,7 +1347,7 @@ input::placeholder{
     padding: 0 20px;
     margin: 20px auto;
     width: 80%;
-    background: #46444fd9;
+    background: grey;
     color: white;
 }
 
@@ -1622,7 +1648,7 @@ input::placeholder{
 #contact-container #contact-text {
     padding: 0 115px
 }
-@media screen and (min-width: 1300px) and (max-width:1499px) {
+@media screen and (min-width: 1375px) and (max-width:1499px) {
     #sign h1{
       font-size:3.2rem;
     }
@@ -1636,6 +1662,7 @@ input::placeholder{
     .navbar .logo-container{
       width:140px;
     }
+
 
 
 
@@ -1672,13 +1699,13 @@ input::placeholder{
         width: 100%
     }
     .nav-inner{
-      width:100%; height:100%;
+      width:104em; height:100%;
     }
     .navbar .logo-container{
       width:150px;
     }
     .navbar .space{
-      width:44.25rem;
+      width:36.25rem;
     }
     .nav-placeholder{
       height:unset;
@@ -1695,7 +1722,7 @@ input::placeholder{
       width:100%;
     }
     #landing .rapper h1{
-      font-size:4.3rem;
+      font-size:4rem;
     }
     #landing .rapper #landing-button{
       width:170px;
@@ -1805,14 +1832,16 @@ input::placeholder{
     font-size:1.2rem;
   }
   #partners-div #partner-logos{
-    justify-content: space-around;
   }
   #partners-div #partner-logos #uhaul-logo {
     width:400px;
     height:120px;
   }
+  #partners-div #partner-logos #ms-logo{
+      height:auto;
+  }
   #partners-div #partner-logos img{
-    width:300px;
+    width:11.75em;
   }
   #partners-div #partner-logos #penske-logo{
     width:300px;
@@ -1832,7 +1861,6 @@ input::placeholder{
     bottom:0;
   }
   #labor-wrapper li {
-    height:320px;
     width:400px;
   }
   #labor-wrapper ul{
@@ -1886,6 +1914,9 @@ input::placeholder{
   #insurance-requests img{
     height: 350px;
     width: 475px;
+  }
+  #footer_ul #footer-img-box img{
+      height:12.5em;
   }
 }
 /*--------------------  End Screens larger than 1040-------------------------*/
@@ -2251,7 +2282,7 @@ input::placeholder{
         background-image: url(cust-cheese.jpg);
     }
     .container #service-container-inside .service-box {
-        margin: 30px 242px
+        margin: 0 auto;
     }
     .container #customer-social-1 #review-div {
         -webkit-box-orient: horizontal;
@@ -2413,10 +2444,10 @@ input::placeholder{
       margin-left:20px;
     }
     .footer-logo-box{
-      display:none;
     }
     .footer-link-box ul{
           padding: 0;
+          font-size:.7rem;
 
     }
     #footer-link-ul h2{

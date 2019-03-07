@@ -11,7 +11,7 @@
 
         <div class="rapper-container row ">
 
-		    <div class="rapper columns large-6 medium-8 small-12">
+		    <div class="rapper columns large-6 medium-10 small-12">
 			    <h1 ><span id="hero-statement">Customize Your Move </span><br> According To Your Lifestyle </h1>
                        <p>Build, book and pay for your move by the hour.   </p>
 
@@ -99,7 +99,7 @@
                              <i class="fa fi-clock" ></i>
                           <p><strong>Save Time</strong></p>
                           </div>
-                          <p class="checklist-desc">Customizing and securing your order takes less than 5 minutes giving you time to deal with life's other issues.</p>
+                          <p class="checklist-desc">Customizing and securing your order takes less than 5 minutes, giving you time to deal with life's other affairs</p>
 
 
                          <div style="display:flex;">
@@ -124,6 +124,7 @@
         <!--benefits end-->
 </div>
 
+<!--------------------------------STEPS---------------------- -->
 
       <div id="steps" >
 
@@ -139,49 +140,52 @@
                                 <polygon fill="hsl(213,65%,19%)" points="0,10 100,0 100,100 0,100"></polygon>
                             </svg>
 
-                               <div id="steps-head" >
+                    <div id="steps-head" >
 
                                <h1 >The Nomad Experience</h1>
-                                   <p >With our 3 step process, you can easily book your moving help in less than 10 minutes, from packing to unpacking! </p>
+                                   <p >With our 3 step process you can lower the cost of your move in minutes rather than searching online for hours </p>
                                    <br>
                                    <hr width="40%" >
 
 
-                               </div>
+                    </div>
 
-                        <div id="ul-container">
+                    <div id="ul-container">
 
-                                <ul class=" no-bullet " style="justify-content:space-around;" >
+                          <ul class=" no-bullet " style="justify-content:space-around;" >
 
-                                        <div id="one" class= "invisible-nums" >1</div>
+                              <div id="one" class= "invisible-nums" >1</div>
 
-                                        <li class=" columns large-3 medium-3 small-12" >
-                                            <!--<a href="http://www.uhaul.com" target="_blank"> -->
+                                    <li class=" columns large-3 medium-3 small-12" >
+                                            <a href="http://www.uhaul.com" target="_blank">
 
-                                            <i class="fa fi-mobile"></i>
-                                            <br>
+                                                <img class="steps-icons" src="{% static 'index/pics/NewTruck-wide.png' %}" alt="truck">
+                                              </a>
 
-                                            <p ><strong >Order your truck </strong><br></p>
-                                            <p class="steps-desc ">Book your truck from our curated list of trusted vendors. </p>
-                                        </li>
+                                          <p ><strong >Order your truck </strong><br></p>
+                                          <p class="steps-desc ">Compare truck prices with our curated list of trusted vendors. </p>
+                                    </li>
 
-                                        <div id="two" class="invisible-nums">2</div>
+                              <div id="two" class="invisible-nums">2</div>
 
-                                        <li class=" columns large-3 medium-3 small-12">
+                                    <li class=" columns large-3 medium-3 small-12">
 
-                                        <a href="quotes.html"><i class="fa fi-clipboard-notes" ></i></a>
-                                           <br>
+                                      <a href="quotes.html">
+                                          <img class="steps-icons" src="{% static 'index/pics/PHONE.png' %}" alt="truck">
+                                      </a>
 
-                                            <p > <strong>Tell us about your move</strong></p>
+                                            <p > <strong>Get your quote</strong></p>
                                             <p class="steps-desc">Send us a list (or pics) of your items. Then, pick a date and time window. </p>
 
-                                        </li>
+                                    </li>
 
                                          <div id="three" class= "invisible-nums">3</div>
 
                                         <li class=" columns large-3 medium-3 small-12">
 
-                                        <a href="quotes.html"><i class="fa fi-lock" ></i></a>
+                                        <a href="quotes.html">
+                                          <img class="steps-icons" id="clipboard-icon" src="{% static 'index/pics/ClipBoards.png' %}" alt="truck">
+                                        </a>
                                            <br>
 
                                             <p> <strong>Confirm your order</strong><br></p>
@@ -198,29 +202,11 @@
                 </div>
                         <div class="clear"></div>
      <!--end of steps -->
-     <!--
- <svg id="blue-circle-container" width="100" height="100" >
-  <circle id="xmen" cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="hsl(213, 65%, 19%)" >
 
-     </circle>
-
- <!-- <line x1="0" y1="0" x2="50" y2="50" stroke="white" stroke-width="2" />
-  <line x1="100" y1="0" x2="50" y2="100" stroke="white" stroke-width="2" />-->
-<!-- </svg>
-      -->
-    <!-- Hero statement -->
-
-
-
-                        <!-- Slideshow container -->
-                            <!--
-                        <img src="https://image.ibb.co/nzR9Qz/IMG968855417001_1525461096545.jpg" alt="IMG968855417001_1525461096545" border="0" height=600px width=900px > -->
-
-
-        <!-- Steps-->
 
                             <div class="clear"></div>
-             <!-- Services -->
+
+             <!------------------------------------SERVICES------------------- -->
                   <div id="services-container">
 
                     <div id="service-container-inside">
@@ -228,16 +214,16 @@
 
                       <h1 > We move on your time </h1>
                       <div id="first" class="row">
-                            
+
                               <div class="service-box" id="load-box">
                                   <h1>Loading</h1>
-                                  <img src="{% static 'index/pics/load-svg.svg' %}" alt="loading">
+                                  <img src="{% static 'index/pics/Dollys.png' %}" alt="loading" >
                                   <br>
                               <!--    <p> Want your items loaded onto a vehicle <span>professionally</span> ? We secure your items for the long or short haul.</p> -->
                               </div>
                               <div class="service-box" id="unload-box">
                                   <h1>Unloading</h1>
-                                  <img src="{% static 'index/pics/Unload-Circle.png' %}" alt="unloading">
+                                  <img src="{% static 'index/pics/Dollys.png' %}" alt="unloading">
                                   <br>
 																	<!--
                                   <p>If you're moving into a new location and need help carrying heavy items. </p> -->
@@ -247,13 +233,13 @@
                       <div id="second" class="row">
                               <div class="service-box" id="pack-box">
                                   <h1>Storage Moves</h1>
-                                  <img src="{% static 'index/pics/Storage-Circle.png' %}" alt="packing">
+                                  <img src="{% static 'index/pics/Dollys.png' %}" alt="packing">
                                   <br><!--
                                   <p>So much to pack, So little time!<br> We pack everything from the kitchen to the kid's room </p>	-->
                               </div>
                               <div class="service-box" id="office-box">
                                   <h1>Interior Moves</h1>
-                                  <img src="{% static 'index/pics/Interior-Design-Circle.png' %}" alt="office moves">
+                                  <img src="{% static 'index/pics/Dollys.png' %}" alt="office moves">
                                   <br>
 																	<!--
                                   <p>Whether you're downsizing or need a bigger office, we can help you move in no time.</p>	-->
@@ -348,14 +334,17 @@
         <div id="partners-div">
             <!-- <a href="https://www.movinglabor.com/movers/new-york/richmond-hill/nomad-movers-llc" title="Verified Moving Company by MovingLabor.com" target="_blank"><img src="//www.movinglabor.com/images/public/supplier/green/new/dark-version-200.png" alt="Verified Moving Company for MovingLabor.com"></a>-->
                <div id="partner-logos" >
+                 <h1> Affiliates </h1>
 
                     <img id="uhaul-logo" src="{% static 'index/pics/uhaul-logo.png' %}" >
 
-                    <a href="https://www.movinglabor.com/movers/new-york/richmond-hill/nomad-movers-llc" title="Verified Moving Company by MovingLabor.com" target="_blank"><img src="//www.movinglabor.com/images/public/supplier/green/new/dark-version-200.png" alt="Verified Moving Company for MovingLabor.com"></a>
+                    <a href="https://www.movinglabor.com/movers/new-york/richmond-hill/nomad-movers-llc" title="Verified Moving Company by MovingLabor.com" target="_blank">
+                      <img id="ms-logo" src="//www.movinglabor.com/images/public/supplier/green/new/dark-version-200.png" alt="Verified Moving Company for MovingLabor.com" >
+                    </a>
 
                      <img id="penske-logo" src="{% static 'index/pics/penske-logo.png' %}">
 
-                    <img id="ms-logo" src="{% static 'index/pics/sml-logo-main.png' %}">
+                    <img id="" src="{% static 'index/pics/sml-logo-main.png' %}">
 
             </div>
         </div>
@@ -366,14 +355,14 @@
        <div id="service-area-head" >
 
            <h1>Service Area</h1> <hr width="30%">
-           <p>Servicing all 5 the boroughs in New York City</p>
+           <p>We service all 5 boroughs in New York City</p>
         </div>
        <!--<div id='map' style='width: 100%; height: 300px;'>
 
        </div>-->
         <div id="map-div">
 
-                <img src="{% static 'index/pics/nyc-boroughs-map.jpg' %}">
+                <img src="{% static 'index/pics/NYC.png' %}">
 
         </div>
 
