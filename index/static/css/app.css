@@ -770,7 +770,10 @@ body ul {
     margin:14px;
 }
 
-#service-container-inside #first {
+#services-container-inside #first h1, #services-container #second h1{
+  color:#112d50;
+}
+#service-container-inside #first{
     margin-top: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -844,7 +847,11 @@ body ul {
     }
 }
 #service-container-inside #first h1, #service-container-inside #second h1{
+<<<<<<< HEAD
   color:white;
+=======
+  color:#112d50;
+>>>>>>> parent of 0bc3e28... Merge https://github.com/Jimb-0/nomadsite
 }
 #first img, #second img{
   height:150px;
@@ -1014,6 +1021,10 @@ footer #footer-link-ul{
   flex-wrap: wrap;
   padding:0;
 }
+
+footer #footer-link-ul a{
+    color:white;
+  }
 footer #footer-link-ul h2{
   width:100%;
 }
@@ -1244,7 +1255,7 @@ footer .copywright, .bottom-line{
 
 #labor-wrapper li {
     overflow: hidden;
-    position: relative; 
+    position: relative;
     background: #112d50;
     color: white;
 }
