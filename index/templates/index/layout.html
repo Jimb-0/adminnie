@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!Doctype.html >
 <html lang="en-US" class="no-js">
 <head>
@@ -165,3 +166,172 @@
 
 </body>
 </html>
+=======
+<!Doctype.html >
+<html lang="en-US" class="no-js">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+    <title>Nomad Movers</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    {% load staticfiles %}
+    <link rel="shortcut icon" type="image/svg" href="{% static 'index/pics/NM-logo-dolly-w.svg' %}">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'fonts/foundation-icons.css' %}">
+    <link rel="stylesheet" href="static/fonts/foundation-icons.css">
+</head>
+<body >
+    <!-- Include Spanish version -->
+
+                        <!--Top Bar -->
+    <div class=" sign-container ">
+        <div id="sign" class = "grid-x grid-padding-x">
+
+            <a href="{% url 'index' %}" title="Nomad Movers | Home" class="large-6"> <h1> <strong>Nomad Movers</strong> </h1>
+
+            </a>
+
+            <a href="{% url 'index' %}" class="large-6 columns hide-for-large" id="sign-logo">
+           <img src="{% static 'index/pics/NM-logo-dolly-w.svg' %}" class="show-for-small">
+           </a>
+
+            <p id="desc"  class="large-6" >On-Demand <br>Moving Labor</p>
+        </div>
+    </div>
+    <div class="clear"></div>
+     <!--NAV BAR-->
+
+        <div id="navBar" class="navbar" >
+
+
+            <div class="fixed-bar ">
+
+                <a href="javascript:void(0);" class="icon hide-for-large" onclick="myFunction()">
+
+                        <i class="fi-align-justify "></i>
+                </a>
+
+
+                <div class="clear show-for-small show-for-medium"></div>
+                <div class="logo-container">
+
+                    <a href="{% url 'index' %}">
+                    <img class="logo" img src="{% static 'index/pics/NM-logo-dolly-w.svg' %}"  alt="NM logo" title="Home"/>
+
+                    </a>
+
+                </div>
+
+                <div class="space"></div>
+
+                <div class="menu-container  ">
+
+                        <div class="menu-bar ">
+                            <ul>
+															<a href="{% url 'index' %}" class="show-for-small-only"><li>Home</li></a>
+															<a href="{% url 'index:services' %}"><li>Services</li></a>
+															<a href="{% url 'index:theteam' %}"><li>The Team</li></a>
+															<a href="{% url 'index:quotes' %}"><li>Quotes</li></a>
+															<a href="{% url 'index:insurance' %}"><li>Insurance</li></a>
+															<a href="{% url 'index:contact' %}"><li>Contact Us</li></a>
+                            </ul>
+                        </div>
+
+            </div>
+
+
+        <a href="{% url 'index:quotes' %}"><button id="navbar-button" class="button">Get Quote</button></a>
+        </div>
+
+    </div>
+             <div class="clear"></div>
+
+             {% block body_block %}
+
+             {% endblock %}
+
+	<footer class="nomad_foot" >
+
+
+				<ul id="footer_ul">
+
+					<li class="footer-logo-box hide-for-small-only">
+							 			<div id="footer-img-box">
+							 					<img src="{% static 'index/pics/NM-logo-dolly-w.svg' %}" alt="">
+							 			</div>
+										<div style="height: 3rem;">
+
+										</div>
+
+			 	</li>
+
+					<li class="footer-link-box">
+
+							<ul style="width:100%; text-align:left;">
+									<li>
+
+
+										<ul  id="footer-link-ul" >
+											<h2> Navigation </h2>
+											<li>
+												<p><a href="#">Blog</p></a>
+												<p><a href="#">Careers</p></a>
+												<p><a href="#">Moving Tips</a></p>
+												<p><a href="#">Moving Calculator</p></a>
+
+										</li>
+
+										<li class="navigation-list-2">
+
+											<a href="#"><p>Sitemap</p></a>
+											<a href="#"><p>Events</p></a>
+											<a href="#"><p>Terms <p/></a>
+											<a href="#"><p>Privacy Policy<p></a>
+										</li>
+
+									 </ul>
+
+								</li>
+
+				 			</ul>
+
+					</li>
+					<li class="mls-tag rounded-social-buttons" >
+						<ul>
+							<li><h2 class="class-link" >Contact Us</h2> <h3> <a tel="+6468206683">(646)820-6683</a></h3></li>
+							<li>
+								<a target="_blank" title="follow us on facebook" href="https://www.facebook.com/nomadmovers">
+									<i class="fa fi-social-facebook" style="font-size:36px; color:#415e82;"></i>
+								</a>
+
+						  </li>
+							<li >
+								<a target="_blank" title="follow us on instagram" href="https://www.instagram.com/nomadmovers">
+								<i class="fa fi-social-instagram" style="font-size:36px; color:rosybrown;"></i>
+							</a>
+
+							</li>
+
+
+						</ul>
+
+					</li>
+					<li class="copywright">
+							<p > &reg; Nomad Movers, LLC. All Rights Reserved</p>
+
+					</li>
+						<li class="bottom-line">
+								<p>Nomad Movers | Moving Labor Service</p>
+
+						</li>
+
+			</ul>
+
+			</footer>
+
+
+</body>
+</html>
+>>>>>>> 1d9a8b62b92ca63099f3026aed1021c69f6cb07c
