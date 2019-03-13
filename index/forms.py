@@ -54,21 +54,13 @@ class Insurance_form(forms.ModelForm):
         model = Insurance
         fields = '__all__'
         widgets = {
-<<<<<<< HEAD
 
-            'name' : forms.TextInput(attrs={'class': 'form_inputs','placeholder':'Enter Your Name'},),
-            'email' : forms.TextInput(attrs={'class': 'form_inputs','placeholder':'Enter Your Email'}),
-            'from_zip' : forms.TextInput(attrs={'class': 'form_inputs','placeholder':'From Zip Code'}),
-            'to_zip' : forms.TextInput(attrs={'class': 'form_inputs','placeholder':'To Zip Code'}),
-            'date' : forms.SelectDateWidget(attrs={'class': 'form_inputs','placeholder':'Moving Date'}),
-=======
         'name' : forms.TextInput(attrs={'class': 'form_inputs','placeholder':'Enter Your Name'},),
         'email' : forms.TextInput(attrs={'class': 'form_inputs','placeholder':'Enter Your Email'}),
         'from_zip' : forms.TextInput(attrs={'class': 'form_inputs','placeholder':'From Zip Code'}),
         'to_zip' : forms.TextInput(attrs={'class': 'form_inputs','placeholder':'To Zip Code'}),
         'date' : forms.SelectDateWidget(attrs={'class': 'form_inputs','placeholder':'Moving Date'}),
 
->>>>>>> f5541dcfc3696cbb81005c81add6b086e9d1d208
         }
 class Contact_form(forms.ModelForm):
     #cc_myself = forms.BooleanField(required=False)
