@@ -27,7 +27,6 @@ screen and (min-width: 40em) {
 .box,
 #service-container-inside .service-box,
 #labor-wrapper li {
-    padding: 5px 15px;
     width: 300px;
     color: white;
     margin: 50px 50px;
@@ -154,7 +153,7 @@ body ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 74.75em;
+    width: 72.75rem;
     margin:0 auto;
 }
 
@@ -260,7 +259,9 @@ body ul {
     -ms-flex-align: center;
     align-items: center
 }
-
+.navbar .menu-bar ul a:active{
+  text-shadow:1px 1px 5px aliceblue;
+}
 .navbar .menu-bar ul a:nth-child(6) {
     border-style: none;
     padding-right: 0
@@ -316,13 +317,12 @@ body ul {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 75vh;
     position: relative;
     background: #112d50;
     color: aliceblue;
     width: 100%;
     padding-top: 100px;
-    height: 391px
+    height: 24.5rem;
 }
 
 #landing .rapper-container {
@@ -444,7 +444,7 @@ body ul {
 }
 
 .prev {
-    left: -13.1em;
+    left: -13.1rem;
 }
 
 .next {
@@ -618,7 +618,7 @@ body ul {
 
 #steps #steps-head p {
     text-align: center;
-    color: darkgrey;
+    color: #f2f2f2;
     padding: 0 390px
 }
 
@@ -632,8 +632,8 @@ body ul {
     width: 33%
 }
 .steps-icons{
-    width: 8.5em;
-    height: 7.5em;
+    width: 8.5rem;
+    height: 7.5rem;
 }
 #steps p {
     padding: 0 30px;
@@ -707,7 +707,7 @@ body ul {
     right: 90px
 }
 #clipboard-icon{
-    width:7em;
+    width:7rem;
 }
 
 #steps svg {
@@ -762,17 +762,13 @@ body ul {
 }
 #service-container-inside h1:first-child {
   margin-bottom:20px;
-  color:white;
 }
 
 #service-container-inside h1 {
-    color: #112d50;
+    color: white;
     margin:14px;
 }
 
-#services-container-inside #first h1, #services-container #second h1{
-  color:#112d50;
-}
 #service-container-inside #first{
     margin-top: 0px;
     display: -webkit-box;
@@ -847,11 +843,7 @@ body ul {
     }
 }
 #service-container-inside #first h1, #service-container-inside #second h1{
-<<<<<<< HEAD
   color:white;
-=======
-  color:#112d50;
->>>>>>> parent of 0bc3e28... Merge https://github.com/Jimb-0/nomadsite
 }
 #first img, #second img{
   height:150px;
@@ -949,7 +941,7 @@ body ul {
 }
 
 #partners-div #partner-logos #ms-logo {
-  height:6.25em;
+  height:6.25rem;
 }
 #partners-div #partner-logos #penske-logo {
     height: 100px;
@@ -1176,11 +1168,8 @@ footer .copywright, .bottom-line{
 }
 
 #services-top {
-    position: relative;
-    height: 460px;
     background: #112d50;
-    top: -60px;
-    z-index: -1
+    margin-top: -60px;
 }
 
 #services-top h1 {
@@ -1189,57 +1178,36 @@ footer .copywright, .bottom-line{
     font-family: "Book Antiqua";
     height: 3rem;
     color: white;
-    padding-top: 60px
+    margin: 5rem 0 0 0;
 }
 
 #services-top #service-labor-pic {
-    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    height: 500px
+    flex-wrap: wrap;
 }
 
-#services-top #service-labor-pic img {
-    position: absolute;
-    top: 100px;
-    image-orientation: from-image;
-    width: 515px;
-    height: 500px;
-    margin: 0;
-    border-radius: 20px;
+#services-top #service-labor-pic p{
+    width: 55rem;
+    font-size: 2rem;
+    color: #f2f2f2;
 }
-
-#services-top #service-text {
-    position: absolute;
-    left: 30px;
-    bottom: 30px;
-    z-index: 2
-}
-
-#services-top #service-text p {
-    text-align: left;
-    position: relative;
-    font-weight: 750;
-    color: black;
-    font-size: 2.5rem
-}
-
-#services-top #service-text p span {
-    color: #f0f8ff
+#services-top #service-labor-pic #service-button{
+    border-radius: 5px;
+    width: 9.5rem;
 }
 
 
 #labor-wrapper {
-    margin-top: 240px;
+    margin-top: 2rem;
 }
 
 #labor-wrapper h2 {
     font-family: "Book Antiqua";
-    margin:5px;
     color:white;
 }
 #labor-wrapper h1{
@@ -1247,32 +1215,47 @@ footer .copywright, .bottom-line{
 }
 
 #labor-wrapper ul {
-    margin-top: -50px;
+    margin:0 auto;
+    width:90%;
+    padding-left:0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    justify-content: center;
+    -webkit-justify-content:center;
 }
 
 #labor-wrapper li {
     overflow: hidden;
-    position: relative;
     background: #112d50;
     color: white;
+    height:22rem;
+    width: 16rem;
+    box-shadow:3px 3px 10px grey;
 }
-
-
+#labor-wrapper .second-div{
+    background: white;
+    text-align:left;
+    color: black;
+    height: 100%;
+    padding: 0 10px;
+    margin: 0;
+}
+#labor-wrapper .second-div h2{
+  color:#112d50;
+  padding-top:.4rem;
+}
 #labor-wrapper li p {
+  margin:0;
 }
 
 #labor-wrapper li:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
-    -webkit-transition: scale(1.1) ease-in 5s;
-    transition: scale(1.1) ease-in 5s;
+    -webkit-transition: scale(1.1) ease-in;
+    transition: scale(1.1) ease-in;
     -webkit-animation-name: grow;
     animation-name: grow;
-    -webkit-animation-duration: 5s;
-    animation-duration: 5s;
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
 
@@ -1295,24 +1278,17 @@ footer .copywright, .bottom-line{
 }
 #labor-wrapper img {
   border-radius: 50%;
-  background: white;
   height:150px;
   width:150px;
 }
 #labor-button{
     width: 170px;
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 18px;
-    background:#112d50;
-    box-shadow: 2px 1px 1px grey;
 }
 #labor-button:hover{
   background:hsl(213, 65%, 35%);
   transform: scale(1.1);
-}
-#tools {
-  padding:20px;
-    text-align: left
 }
 
 
@@ -1357,9 +1333,11 @@ input::placeholder{
     border-radius: 5px;
     padding: 0 20px;
     margin: 20px auto;
-    width: 80%;
+    width: 50%;
     background: grey;
     color: white;
+    text-align: left;
+    box-shadow: inset 0 0 10px #f2f2f2;
 }
 
 #quote-box form label {
@@ -1539,6 +1517,7 @@ input::placeholder{
     font-weight: bold;
     font-size: 1.5rem;
     position: absolute;
+    left:0;
     bottom: 0;
     z-index:2;
 }
@@ -2327,12 +2306,8 @@ input::placeholder{
         font-size: 2rem;
         height: unset
     }
-    #services-top #service-labor-pic {
-        margin-top: -80px
-    }
-    #services-top #service-labor-pic img {
-        height: 461px;
-        width: unset
+    #services-top #service-labor-pic p{
+      font-size:1.5rem;
     }
     #labor-wrapper ul {
         -webkit-box-orient: horizontal;
@@ -2442,6 +2417,10 @@ input::placeholder{
     }
     .navbar .menu-bar {
         display: none
+    }
+    #service #service-labor-pic p{
+      font-size: 1.5rem;
+      padding: 0 10px;
     }
     /* FOOTER */
     footer {
