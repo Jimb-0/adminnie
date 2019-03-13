@@ -1,0 +1,41 @@
+# JOE state file v1.0
+search
+	backwards 0
+	ignore 0
+	replace 0
+	block_restrict 0
+	regex 0
+done
+macros
+done
+files
+	"/home/JimboDF/.git/COMMIT_EDITMSG\n"
+	"/home/JimboDF/.git/COMMIT_EDITMSG\n"
+	"/home/JimboDF/.git/COMMIT_EDITMSG\n"
+	"/home/JimboDF/nomadsite/nomadsite/.git/COMMIT_EDITMSG\n"
+	"/home/JimboDF/nomadsite/nomadsite/.git/COMMIT_EDITMSG\n"
+	"/home/JimboDF/nomadsite/nomadsite/.git/COMMIT_EDITMSG\n"
+	"/home/JimboDF/nomadsite/nomadsite/.git/COMMIT_EDITMSG\n"
+done
+find
+done
+replace
+done
+run
+done
+build
+done
+grep
+done
+cmd
+done
+math
+done
+yank
+	"or"
+	"ae"
+done
+file_pos
+	2 "/home/JimboDF/.git/COMMIT_EDITMSG"
+	3 "/home/JimboDF/nomadsite/nomadsite/.git/COMMIT_EDITMSG"
+done
