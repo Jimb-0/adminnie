@@ -1,0 +1,190 @@
+<!DOCTYPE.html>
+{% extends 'index/layout.html' %}
+
+{% block body_block %}
+
+{% load staticfiles %}<!-- CONTAINER -->
+
+<div class="container-container">
+    <div class="container">
+
+    <div id="services-top">
+
+
+
+        <div id="service-labor-pic" >
+          <h1 > <span>Relax.</span><br class="show-for-small-only">  We got this. </h1>
+            <p>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Enim nec dui nunc mattis enim ut.
+            </p>
+            <div style="width:100%;padding: 1rem;">
+              <button id="service-button" class="button">
+                <a href="{% url 'index:quotes' %}" >Get Quote</a>
+              </button>
+
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+
+    </div>
+
+    <div class="clear"></div>
+
+
+     <div id="labor-wrapper" >
+        <!-- Level 1-->
+
+        <h1 > Build. Book. Save. </h1>
+        <ul >
+         <li class="labor1">
+          <div>
+            <img src="{% static 'index/pics/Load.png' %}">
+          </div>
+          <div class="second-div">
+                     <h2>Loading</h2>
+                     <p>Want your items loaded onto a vehicle professionally?
+                       We secure your items for the long or short haul.
+                     </p>
+            </div>
+         </li>
+         <li id="labor2">
+             <div>
+               <img src="{% static 'index/pics/UnLoad.png' %}">
+
+             </div>
+
+             <div class="second-div">
+                  <a href="quotes.html"><h2>Unloading</h2></a>
+                 <p>If you're moving into a new location and need help carrying heavy items.</p>
+              </div>
+         </li>
+         <li id="labor3">
+              <div>
+                <img src="{% static 'index/pics/packing.png' %}">
+              </div>
+
+              <div class="second-div">
+                 <a href="quotes.html"><h2>Packing</h2></a>
+                 <p>So much to pack, So little time!
+                   We pack everything from the kitchen to the kid's room
+                 </p>
+              </div>
+         </li>
+        </ul>
+
+    <!--end of level 1-->
+        <ul >
+
+         <li id="labor4">
+             <div>
+               <img src="{% static 'index/pics/unpacking.png' %}">
+
+              </div>
+
+              <div class="second-div">
+                  <h2>Unpacking</h2>
+                 <p>Don't let your unpacked boxes sit for weeks,
+                   we can unpack and set up furniture.
+                 </p>
+               </div>
+         </li>
+         <li id="labor5">
+           <div>
+             <img src="{% static 'index/pics/Storage-Moves.png' %}" alt="">
+
+            </div>
+             <div class="second-div">
+                  <a href="quotes.html"><h2>Storage Moves</h2></a>
+                 <p>We all need a little extra space.
+                   If you're using a storage facility, we can help you move in or out.
+                 </p>
+              </div>
+         </li>
+         <li id="labor6">
+           <div>
+             <img src="{% static 'index/pics/dorm_moves.png' %}" alt="">
+            </div>
+            <div class="second-div">
+
+                 <a href="quotes.html"><h2>Dorm Move-Ins</h2></a>
+                 <p>Why worry about anything more than your classes this semester?
+                  Leave the moving in to us.
+                 </p>
+             </div>
+         </li>
+         </ul>
+
+         <ul >
+
+         <li id="labor7">
+                 <div>
+                    <img src="{% static 'index/pics/Internal_Moves.png' %}">
+
+                 </div>
+                 <div class="second-div">
+                     <a href="quotes.html"><h2>Internal Transfers</h2></a>
+                     <p>Moving within the same building?
+                     We can maneuver those big, hefty items. No wall damage!
+                     </p>
+                 </div>
+         </li>
+         <li id="labor8">
+              <div>
+                <img src="{% static 'index/pics/Office.png' %}" alt="">
+              </div>
+
+               <div class="second-div">
+                 <a href="quotes.html"><h2>Office Moves</h2></a>
+
+                  <p>Whether you're downsizing or need a bigger office,
+                   we can help you move in no time.</p>
+               </div>
+         </li>
+         <li id="labor9">
+             <div>
+               <img src="{% static 'index/pics/interior-design.png' %}" alt="">
+
+             </div>
+             <div class="second-div">
+                    <a href="quotes.html"><h2>Interior Design Projects</h2></a>
+                   <p>You plan, arrange and position,
+                    we'll do the heavy lifting. </p>
+              </div>
+         </li>
+         </ul>
+
+         <div>
+
+             <button class="button" id="labor-button">Get Started!</button>
+         </div>
+     </div>
+
+        <div id="tools">
+					<p>These services can be ordered independently or together. </p>
+            <p> * Please inquire about tools and equipment.</p>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+    <div id="back-to-top">
+       <a href="#" title="back-to-top">
+        <i class="fi-arrow-up"></i>
+        </a>
+    </div>
+
+
+
+
+
+		{% endblock %}
+
+</body>
+
+</html>

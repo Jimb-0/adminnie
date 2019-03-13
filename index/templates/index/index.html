@@ -1,0 +1,898 @@
+<<<<<<< HEAD
+<!DOCTYPE.html>
+<!-- C:\Users\Jimmy\Desktop\nomadmovers-project\nomadmovers\index\templates\index.html -->
+
+{% extends 'index/layout.html' %}
+
+{% block body_block %}
+
+{% load staticfiles %}
+
+ <div id="landing">
+
+        <div class="rapper-container row ">
+
+		    <div class="rapper columns large-6 medium-10 small-12">
+			    <h1 ><span id="hero-statement">Customize Your Move </span><br> According To Your Lifestyle </h1>
+                       <p>Build, book and pay for your move by the hour.   </p>
+
+                <a href="{% url 'index:quotes' %}" >
+                <button id="landing-button" class="button">Get Quote</button>
+                </a>
+
+            </div>
+    <!-- SLIDESHOW -->
+            <div class="slideshow-container columns large-6 show-for-large " >
+
+                        <div id="slideshow-bgrd" >
+  <!-- Full-width images with number and caption text -->
+
+           <div class="mySlides fade" >
+            <img src="https://image.ibb.co/kXdUEe/Markand_Chris.jpg" alt="Markand_Chris" border="0" >
+          </div>
+          <!--
+          <div class="mySlides fade">
+            <img src="https://image.ibb.co/jpMnZe/loadjob6.jpg" alt="loadjob6" border="0"  >
+          </div>
+          -->
+
+          <div class="mySlides fade">
+            <img src="https://image.ibb.co/nzR9Qz/IMG968855417001_1525461096545.jpg" >
+            <div class="clear"></div>
+          </div>
+
+
+           <div class="mySlides fade">
+            <img src="https://image.ibb.co/hwgviK/IMG1870941812001_1521049454953.jpg" alt="IMG1870941812001_1521049454953" border="0" >
+          </div>
+
+        <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
+
+                        <div id="dots">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+   <!--           <span class="dot" onclick="currentSlide(4)"></span> -->
+            </div>
+
+    </div>
+
+          </div>
+           <div class="clear"></div>
+
+        <!-- The dots/circles -->
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="show-for-large show-for-medium">
+                            <polygon fill="aliceblue" points="0,100 50,0 100,0 100,100"/>
+            </svg>
+
+     </div>
+
+        <!-- send container back behind navbar-->
+        <div class="clear"></div>
+
+<div class="container-container " >
+
+    <div class="container">
+
+         <div id="benefits" class="row ">
+
+                 <div id="benefits-header" class="small-12 large-4 medium-6 columns "> <h1>Peace of mind for you and your wallet</h1> </div>
+                 <div class="large-8 small-12 medium-6 columns "></div>
+
+         <div class="clear"></div>
+
+                 <div id="benefits-content" class="grid-x" >
+
+                  <div class="columns large-6 small-12 medium-6">
+                   <img id="benefits-pic" src="{% static 'index/pics/unload.jpg' %}" border="0" >
+                    </div>
+                    <div id="choice-divs-div" class="small-12 large-6 medium-6 columns">
+
+                     <div id="choice-div" class=""> <p>Ordering moving labor has never been easier. </p>
+                     </div>
+
+                      <div id="checklist-div" class="" >
+
+                         <div style="display:flex;">
+                             <i class="fa fi-clock" ></i>
+                          <p><strong>Save Time</strong></p>
+                          </div>
+                          <p class="checklist-desc">Customizing and securing your order takes less than 5 minutes giving you time to deal with life's other issues.</p>
+
+
+                         <div style="display:flex;">
+                             <i class="fi-dollar" ></i>
+                          <p  ><strong>Save Money</strong></p>
+                          </div>
+                          <p class="checklist-desc">Our customers, on average, spend less than $250 for the entire move</p>
+
+
+                         <div style="display:flex;">
+                             <i  class="fi-like"></i>
+                          <p><strong>Don't Worry</strong></p>
+                          </div>
+                          <p class="checklist-desc">You can opt-in to have us directly handle any insurance requirements your building requests  </p>
+
+                        </div>
+                     </div>
+
+                                 <!-- benefits-content -->
+        </div>
+
+        <!--benefits end-->
+</div>
+
+
+      <div id="steps" >
+
+                            <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="show-for-large ">
+                                <polygon fill="hsl(213,65%,19%)" points="0,20 50,0 100,20 100,100 0,100"/>
+                            </svg>
+
+                            <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="show-for-medium ">
+                                <polygon fill="hsl(213,65%,19%)" points="0,20 50,0 100,20 100,100 0,100"/>
+                            </svg>
+
+                            <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="show-for-small-only">
+                                <polygon fill="hsl(213,65%,19%)" points="0,10 100,0 100,100 0,100"></polygon>
+                            </svg>
+
+                               <div id="steps-head" >
+
+                               <h1 >The Nomad Experience</h1>
+                                   <p >With our 3 step process, you can easily book your moving help in less than 10 minutes, from packing to unpacking! </p>
+                                   <br>
+                                   <hr width="40%" >
+
+
+                               </div>
+
+                        <div id="ul-container">
+
+                                <ul class=" no-bullet " style="justify-content:space-around;" >
+
+                                        <div id="one" class= "invisible-nums" >1</div>
+
+                                        <li class=" columns large-3 medium-3 small-12" >
+                                            <!--<a href="http://www.uhaul.com" target="_blank"> -->
+
+                                            <i class="fa fi-mobile"></i>
+                                            <br>
+
+                                            <p ><strong >Order your truck </strong><br></p>
+                                            <p class="steps-desc ">Book your truck from our curated list of trusted vendors. </p>
+                                        </li>
+
+                                        <div id="two" class="invisible-nums">2</div>
+
+                                        <li class=" columns large-3 medium-3 small-12">
+
+                                        <a href="quotes.html"><i class="fa fi-clipboard-notes" ></i></a>
+                                           <br>
+
+                                            <p > <strong>Tell us about your move</strong></p>
+                                            <p class="steps-desc">Send us a list (or pics) of your items. Then, pick a date and time window. </p>
+
+                                        </li>
+
+                                         <div id="three" class= "invisible-nums">3</div>
+
+                                        <li class=" columns large-3 medium-3 small-12">
+
+                                        <a href="quotes.html"><i class="fa fi-lock" ></i></a>
+                                           <br>
+
+                                            <p> <strong>Confirm your order</strong><br></p>
+                                            <p class="steps-desc"> Lock in the preferred date and time and you're all set!</p>
+
+                                        </li>
+
+                                </ul>
+
+                        </div>
+
+
+
+                </div>
+                        <div class="clear"></div>
+     <!--end of steps -->
+     <!--
+ <svg id="blue-circle-container" width="100" height="100" >
+  <circle id="xmen" cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="hsl(213, 65%, 19%)" >
+
+     </circle>
+
+ <!-- <line x1="0" y1="0" x2="50" y2="50" stroke="white" stroke-width="2" />
+  <line x1="100" y1="0" x2="50" y2="100" stroke="white" stroke-width="2" />-->
+<!-- </svg>
+      -->
+    <!-- Hero statement -->
+
+
+
+                        <!-- Slideshow container -->
+                            <!--
+                        <img src="https://image.ibb.co/nzR9Qz/IMG968855417001_1525461096545.jpg" alt="IMG968855417001_1525461096545" border="0" height=600px width=900px > -->
+
+
+        <!-- Steps-->
+
+                            <div class="clear"></div>
+             <!-- Services -->
+                  <div id="services-container">
+
+                    <div id="service-container-inside">
+                      <!--Inside Service Container -->
+
+                      <h1 > We move on your time </h1>
+                      <div id="first" class="row">
+
+                              <div class="service-box" id="load-box">
+                                  <h1>Loading</h1>
+                                  <img src="{% static 'index/pics/load-svg.svg' %}" alt="loading">
+                                  <br>
+                              <!--    <p> Want your items loaded onto a vehicle <span>professionally</span> ? We secure your items for the long or short haul.</p> -->
+                              </div>
+                              <div class="service-box" id="unload-box">
+                                  <h1>Unloading</h1>
+                                  <img src="{% static 'index/pics/Unload-Circle.png' %}" alt="unloading">
+                                  <br>
+																	<!--
+                                  <p>If you're moving into a new location and need help carrying heavy items. </p> -->
+                              </div>
+                      </div>
+
+                      <div id="second" class="row">
+                              <div class="service-box" id="pack-box">
+                                  <h1>Storage Moves</h1>
+                                  <img src="{% static 'index/pics/Storage-Circle.png' %}" alt="packing">
+                                  <br><!--
+                                  <p>So much to pack, So little time!<br> We pack everything from the kitchen to the kid's room </p>	-->
+                              </div>
+                              <div class="service-box" id="office-box">
+                                  <h1>Interior Moves</h1>
+                                  <img src="{% static 'index/pics/Interior-Design-Circle.png' %}" alt="office moves">
+                                  <br>
+																	<!--
+                                  <p>Whether you're downsizing or need a bigger office, we can help you move in no time.</p>	-->
+                              </div>
+                      </div>
+
+                    </div>
+                </div>
+<!--                 REVIEWS NUGGET                     -->
+
+
+                    <div id="customer-social-container" >
+                            <div id="customer-social-1">
+
+
+                    <!-- Add background -truck? -->
+
+
+                                <h3 >Customer Reviews</h3>
+                                <p>We appreciate what customers have thought about their experience with our movers!
+                           </p>
+
+                            <i id="comments-icon" class="fa fi-comments" ></i>
+
+                           <div id="review-div" >
+                               <div class="blockquote">
+
+                                           <p> <i class="fi-quote" style=" margin-right:20px; float:left; font-size: 48px; color:green;"></i>
+                                           "These guys are rockstars! They hustled and got all our belongings in and out of the truck quickly and efficiently, and SAFELY! They were also extremely friendly and personable. I would definitely recommend to all my friends."</p>
+                                           <hr width="75%">
+                                    <div class="cust-rev-name">
+                                           <p style="width:100%;">- <em>Dwane R., <br>Bronx, NY</em> </p>
+                                           <br>
+                                           <div class="columns large-8"></div>
+
+                                           <i class="fi-star" style="color:gold;"></i>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                   </div>
+
+                            </div>
+
+                               <div class="blockquote">
+                                  <p><i class="fi-quote" style=" margin-right:20px; float:left; font-size: 48px; color:green;"></i>
+                                  "You're a fool if you use anyone besides Nomad Movers. These guys were friendly, hardworking, professional and super strong. I wish I had another move next week just so I could use them!"</p>
+
+                                   <hr width="75%">
+
+                                   <div class="cust-rev-name" >
+                                           <p style="width:100%;">- <em>Jacob W., <br>Brooklyn, NY</em> </p>
+                                           <br>
+
+                                          <div class="columns large-8"></div>
+                                           <i class="fi-star" style="color:gold; float:right;"></i>
+                                           <i class="fi-star" style="color:gold; float:right;"></i>
+                                           <i class="fi-star" style="color:gold; float:right;"></i>
+                                           <i class="fi-star" style="color:gold; float:right;"></i>
+                                           <i class="fi-star" style="color:gold; float:right;"></i>
+                                   </div>
+                               </div>
+
+                               <div class="blockquote">
+                                   <p><i class="fi-quote" style=" margin-right:20px; float:left; font-size: 48px; color:green;"></i>
+                                   "Josh &amp; Alex packed a Uhaul for me today and they were great! Showed up on time, finished in an hour and a half, and organized all my stuff in the truck wonderfully! I would highly recommend them to anyone looking for movers."</p>
+                                   <hr width="75%">
+                                   <div class="cust-rev-name"  >
+                                           <p style="width:100%;">- <em>Rebecca K., <br>Bronx, NY</em> </p>
+                                           <br>
+
+                                           <div class="columns large-8"></div>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                   </div>
+                               </div>
+
+                           </div>
+
+
+                            </div>
+
+                    </div>
+
+                <!-- Add in mirror to previous div (checklist) -->
+
+
+                    <!-- Partners -->
+        <div id="partners-div">
+            <!-- <a href="https://www.movinglabor.com/movers/new-york/richmond-hill/nomad-movers-llc" title="Verified Moving Company by MovingLabor.com" target="_blank"><img src="//www.movinglabor.com/images/public/supplier/green/new/dark-version-200.png" alt="Verified Moving Company for MovingLabor.com"></a>-->
+               <div id="partner-logos" >
+
+                    <img id="uhaul-logo" src="{% static 'index/pics/uhaul-logo.png' %}" >
+
+                    <a href="https://www.movinglabor.com/movers/new-york/richmond-hill/nomad-movers-llc" title="Verified Moving Company by MovingLabor.com" target="_blank"><img src="//www.movinglabor.com/images/public/supplier/green/new/dark-version-200.png" alt="Verified Moving Company for MovingLabor.com"></a>
+
+                     <img id="penske-logo" src="{% static 'index/pics/penske-logo.png' %}">
+
+                    <img id="ms-logo" src="{% static 'index/pics/sml-logo-main.png' %}">
+
+            </div>
+        </div>
+
+
+       <div class="clear"></div>
+
+       <div id="service-area-head" >
+
+           <h1>Service Area</h1> <hr width="30%">
+           <p>Servicing all 5 the boroughs in New York City</p>
+        </div>
+       <!--<div id='map' style='width: 100%; height: 300px;'>
+
+       </div>-->
+        <div id="map-div">
+
+                <img src="{% static 'index/pics/nyc-boroughs-map.jpg' %}">
+
+        </div>
+
+    </div>
+
+    <div class="clear"></div>
+
+</div>
+
+
+    <!--body-container-->
+
+   <!------------------------------------------------FIXED DIVS -->
+ <!--   <div id="fixed-call" class="button ">
+
+      <i class="fa fa-phone" ></i>(646) 820-MOVE
+
+    </div> -->
+
+    <div id="back-to-top">
+       <a href="#" title="back-to-top">
+        <i class="fi-arrow-up"></i>
+        </a>
+    </div>
+
+   <!--
+                                       ANIMATION VIDEO
+    <div id="animation-container">
+                     <div id="animation">
+                      <marquee>Animation</marquee>
+                    </div>
+
+    </div>
+
+
+                <!--Footer-->
+   <!--     Moving Statistics video
+    <iframe src="//www.slideshare.net/slideshow/embed_code/key/dIynvMlSqMGxO" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/MyMovingReviews/2017-trends-in-moving-mymovingreviews-annual-data-report" title="2017 Trends in Moving - MyMovingReviews Annual data Report" target="_blank">2017 Trends in Moving - MyMovingReviews Annual data Report</a> </strong> from <strong><a href="https://www.slideshare.net/MyMovingReviews" target="_blank">MyMovingReviews.com</a></strong> </div> -->
+
+
+            <!--Slideshow-->
+
+<script>
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+{% endblock %}
+
+
+
+</body>
+</html>
+=======
+<!DOCTYPE.html>
+<!-- C:\Users\Jimmy\Desktop\nomadmovers-project\nomadmovers\index\templates\index.html -->
+
+{% extends 'index/layout.html' %}
+
+{% block body_block %}
+
+{% load staticfiles %}
+
+ <div id="landing">
+
+        <div class="rapper-container row ">
+
+		    <div class="rapper columns large-6 medium-10 small-12">
+			    <h1 ><span id="hero-statement">Customize Your Move </span><br> According To Your Lifestyle </h1>
+                       <p>Build, book and pay for your move by the hour.   </p>
+
+                <a href="{% url 'index:quotes' %}" >
+                <button id="landing-button" class="button">Get Quote</button>
+                </a>
+
+            </div>
+    <!-- SLIDESHOW -->
+            <div class="slideshow-container columns large-6 show-for-large " >
+
+                        <div id="slideshow-bgrd" >
+  <!-- Full-width images with number and caption text -->
+
+           <div class="mySlides fade" >
+            <img src="https://image.ibb.co/kXdUEe/Markand_Chris.jpg" alt="Markand_Chris" border="0" >
+          </div>
+          <!--
+          <div class="mySlides fade">
+            <img src="https://image.ibb.co/jpMnZe/loadjob6.jpg" alt="loadjob6" border="0"  >
+          </div>
+          -->
+
+          <div class="mySlides fade">
+            <img src="https://image.ibb.co/nzR9Qz/IMG968855417001_1525461096545.jpg" >
+            <div class="clear"></div>
+          </div>
+
+
+           <div class="mySlides fade">
+            <img src="https://image.ibb.co/hwgviK/IMG1870941812001_1521049454953.jpg" alt="IMG1870941812001_1521049454953" border="0" >
+          </div>
+
+        <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
+
+                        <div id="dots">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+   <!--           <span class="dot" onclick="currentSlide(4)"></span> -->
+            </div>
+
+    </div>
+
+          </div>
+           <div class="clear"></div>
+
+        <!-- The dots/circles -->
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="show-for-large show-for-medium">
+                            <polygon fill="aliceblue" points="0,100 50,0 100,0 100,100"/>
+            </svg>
+
+     </div>
+
+        <!-- send container back behind navbar-->
+        <div class="clear"></div>
+
+<div class="container-container " >
+
+    <div class="container">
+
+         <div id="benefits" class="row ">
+
+                 <div id="benefits-header" class="small-12 large-4 medium-6 columns "> <h1>Peace of mind for you and your wallet</h1> </div>
+                 <div class="large-8 small-12 medium-6 columns "></div>
+
+         <div class="clear"></div>
+
+                 <div id="benefits-content" class="grid-x" >
+
+                  <div class="columns large-6 small-12 medium-6">
+                   <img id="benefits-pic" src="{% static 'index/pics/unload.jpg' %}" border="0" >
+                    </div>
+                    <div id="choice-divs-div" class="small-12 large-6 medium-6 columns">
+
+                     <div id="choice-div" class=""> <p>Ordering moving labor has never been easier. </p>
+                     </div>
+
+                      <div id="checklist-div" class="" >
+
+                         <div style="display:flex;">
+                             <i class="fa fi-clock" ></i>
+                          <p><strong>Save Time</strong></p>
+                          </div>
+                          <p class="checklist-desc">Customizing and securing your order takes less than 5 minutes</p>
+
+
+                         <div style="display:flex;">
+                             <i class="fi-dollar" ></i>
+                          <p  ><strong>Save Money</strong></p>
+                          </div>
+                          <p class="checklist-desc">Our customers, on average, spend less than $250 for the entire move</p>
+
+
+                         <div style="display:flex;">
+                             <i  class="fi-like"></i>
+                          <p><strong>Don't Worry</strong></p>
+                          </div>
+                          <p class="checklist-desc">You can opt-in to have us directly handle any insurance requirements your building requests  </p>
+
+                        </div>
+                     </div>
+
+                                 <!-- benefits-content -->
+        </div>
+
+        <!--benefits end-->
+</div>
+
+<!--------------------------------STEPS---------------------- -->
+
+      <div id="steps" >
+
+                            <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="show-for-large ">
+                                <polygon fill="hsl(213,65%,19%)" points="0,20 50,0 100,20 100,100 0,100"/>
+                            </svg>
+
+                            <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="show-for-medium ">
+                                <polygon fill="hsl(213,65%,19%)" points="0,20 50,0 100,20 100,100 0,100"/>
+                            </svg>
+
+                            <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="show-for-small-only">
+                                <polygon fill="hsl(213,65%,19%)" points="0,10 100,0 100,100 0,100"></polygon>
+                            </svg>
+
+                    <div id="steps-head" >
+
+                               <h1 >The Nomad Experience</h1>
+                                   <p >With our 3 step process you can lower the cost of your move in minutes rather than searching online for hours </p>
+                                   <br>
+                                   <hr width="40%" >
+
+
+                    </div>
+
+                    <div id="ul-container">
+
+                          <ul class=" no-bullet " style="justify-content:space-around;" >
+
+                              <div id="one" class= "invisible-nums" >1</div>
+
+                                    <li class=" columns large-3 medium-3 small-12" >
+                                            <a href="http://www.uhaul.com" target="_blank">
+
+                                                <img class="steps-icons" src="{% static 'index/pics/NewTruck-wide.png' %}" alt="truck">
+                                              </a>
+
+                                          <p ><strong >Order your truck </strong><br></p>
+                                          <p class="steps-desc ">Compare truck prices with our curated list of trusted vendors. </p>
+                                    </li>
+
+                              <div id="two" class="invisible-nums">2</div>
+
+                                    <li class=" columns large-3 medium-3 small-12">
+
+                                      <a href="quotes.html">
+                                          <img class="steps-icons" src="{% static 'index/pics/PHONE.png' %}" alt="truck">
+                                      </a>
+
+                                            <p > <strong>Get your quote</strong></p>
+                                            <p class="steps-desc">Send us a list (or pics) of your items. Then, pick a date and time window. </p>
+
+                                    </li>
+
+                                         <div id="three" class= "invisible-nums">3</div>
+
+                                        <li class=" columns large-3 medium-3 small-12">
+
+                                        <a href="quotes.html">
+                                          <img class="steps-icons" id="clipboard-icon" src="{% static 'index/pics/ClipBoards.png' %}" alt="truck">
+                                        </a>
+                                           <br>
+
+                                            <p> <strong>Confirm your order</strong><br></p>
+                                            <p class="steps-desc"> Lock in the preferred date and time and you're all set!</p>
+
+                                        </li>
+
+                                </ul>
+
+                        </div>
+
+
+
+                </div>
+                        <div class="clear"></div>
+     <!--end of steps -->
+
+
+                            <div class="clear"></div>
+
+             <!------------------------------------SERVICES------------------- -->
+                  <div id="services-container">
+
+                    <div id="service-container-inside">
+                      <!--Inside Service Container -->
+
+                      <h1 > We move on your time </h1>
+                      <div id="first" class="row">
+
+                              <div class="service-box" id="load-box">
+                                  <h1>Loading</h1>
+                                  <img src="{% static 'index/pics/Load.png' %}" alt="loading" >
+                                  <br>
+                              <!--    <p> Want your items loaded onto a vehicle <span>professionally</span> ? We secure your items for the long or short haul.</p> -->
+                              </div>
+                              <div class="service-box" id="unload-box">
+                                  <h1>Unloading</h1>
+                                  <img src="{% static 'index/pics/UnLoad.png' %}" alt="unloading">
+                                  <br>
+																	<!--
+                                  <p>If you're moving into a new location and need help carrying heavy items. </p> -->
+                              </div>
+                      </div>
+
+                      <div id="second" class="row">
+                              <div class="service-box" id="pack-box">
+                                  <h1>Storage Moves</h1>
+                                  <img src="{% static 'index/pics/Storage-Moves.png' %}" alt="packing">
+                                  <br><!--
+                                  <p>So much to pack, So little time!<br> We pack everything from the kitchen to the kid's room </p>	-->
+                              </div>
+                              <div class="service-box" id="office-box">
+                                  <h1>Interior Moves</h1>
+                                  <img src="{% static 'index/pics/interior-design.png' %}" alt="office moves">
+                                  <br>
+																	<!--
+                                  <p>Whether you're downsizing or need a bigger office, we can help you move in no time.</p>	-->
+                              </div>
+                      </div>
+
+                    </div>
+                </div>
+<!--                 REVIEWS NUGGET                     -->
+
+
+                    <div id="customer-social-container" >
+                            <div id="customer-social-1">
+
+
+                    <!-- Add background -truck? -->
+
+
+                                <h3 >Customer Reviews</h3>
+                                <p>We appreciate what customers have thought about their experience with our movers!
+                           </p>
+
+                            <i id="comments-icon" class="fa fi-comments" ></i>
+
+                           <div id="review-div" >
+                               <div class="blockquote">
+
+                                           <p> <i class="fi-quote" style=" margin-right:20px; float:left; font-size: 48px; color:green;"></i>
+                                           "These guys are rockstars! They hustled and got all our belongings in and out of the truck quickly and efficiently, and SAFELY! They were also extremely friendly and personable. I would definitely recommend to all my friends."</p>
+                                           <hr width="75%">
+                                    <div class="cust-rev-name">
+                                           <p style="width:100%;">- <em>Dwane R., <br>Bronx, NY</em> </p>
+                                           <br>
+                                           <div class="columns large-8"></div>
+
+                                           <i class="fi-star" style="color:gold;"></i>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                   </div>
+
+                            </div>
+
+                               <div class="blockquote">
+                                  <p><i class="fi-quote" style=" margin-right:20px; float:left; font-size: 48px; color:green;"></i>
+                                  "You're a fool if you use anyone besides Nomad Movers. These guys were friendly, hardworking, professional and super strong. I wish I had another move next week just so I could use them!"</p>
+
+                                   <hr width="75%">
+
+                                   <div class="cust-rev-name" >
+                                           <p style="width:100%;">- <em>Jacob W., <br>Brooklyn, NY</em> </p>
+                                           <br>
+
+                                          <div class="columns large-8"></div>
+                                           <i class="fi-star" style="color:gold; float:right;"></i>
+                                           <i class="fi-star" style="color:gold; float:right;"></i>
+                                           <i class="fi-star" style="color:gold; float:right;"></i>
+                                           <i class="fi-star" style="color:gold; float:right;"></i>
+                                           <i class="fi-star" style="color:gold; float:right;"></i>
+                                   </div>
+                               </div>
+
+                               <div class="blockquote">
+                                   <p><i class="fi-quote" style=" margin-right:20px; float:left; font-size: 48px; color:green;"></i>
+                                   "Josh &amp; Alex packed a Uhaul for me today and they were great! Showed up on time, finished in an hour and a half, and organized all my stuff in the truck wonderfully! I would highly recommend them to anyone looking for movers."</p>
+                                   <hr width="75%">
+                                   <div class="cust-rev-name"  >
+                                           <p style="width:100%;">- <em>Rebecca K., <br>Bronx, NY</em> </p>
+                                           <br>
+
+                                           <div class="columns large-8"></div>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                           <i class="fi-star" style="color:gold;"></i>
+                                   </div>
+                               </div>
+
+                           </div>
+
+
+                            </div>
+
+                    </div>
+
+                <!-- Add in mirror to previous div (checklist) -->
+
+
+                    <!-- Partners -->
+        <div id="partners-div">
+            <!-- <a href="https://www.movinglabor.com/movers/new-york/richmond-hill/nomad-movers-llc" title="Verified Moving Company by MovingLabor.com" target="_blank"><img src="//www.movinglabor.com/images/public/supplier/green/new/dark-version-200.png" alt="Verified Moving Company for MovingLabor.com"></a>-->
+               <div id="partner-logos" >
+                 <h1> Affiliates </h1>
+
+                    <img id="uhaul-logo" src="{% static 'index/pics/uhaul-logo.png' %}" >
+
+                    <a href="https://www.movinglabor.com/movers/new-york/richmond-hill/nomad-movers-llc" title="Verified Moving Company by MovingLabor.com" target="_blank">
+                      <img id="ms-logo" src="//www.movinglabor.com/images/public/supplier/green/new/dark-version-200.png" alt="Verified Moving Company for MovingLabor.com" >
+                    </a>
+
+                     <img id="penske-logo" src="{% static 'index/pics/penske-logo.png' %}">
+
+                    <img id="" src="{% static 'index/pics/sml-logo-main.png' %}">
+
+            </div>
+        </div>
+
+
+       <div class="clear"></div>
+
+       <div id="service-area-head" >
+
+           <h1>Service Area</h1> <hr width="30%">
+           <p>We service all 5 boroughs in New York City</p>
+        </div>
+       <!--<div id='map' style='width: 100%; height: 300px;'>
+
+       </div>-->
+        <div id="map-div">
+
+                <img src="{% static 'index/pics/NYC.png' %}">
+
+        </div>
+
+    </div>
+
+    <div class="clear"></div>
+
+</div>
+
+
+    <!--body-container-->
+
+   <!------------------------------------------------FIXED DIVS -->
+ <!--   <div id="fixed-call" class="button ">
+
+      <i class="fa fa-phone" ></i>(646) 820-MOVE
+
+    </div> -->
+
+    <div id="back-to-top">
+       <a href="#" title="back-to-top">
+        <i class="fi-arrow-up"></i>
+        </a>
+    </div>
+
+   <!--
+                                       ANIMATION VIDEO
+    <div id="animation-container">
+                     <div id="animation">
+                      <marquee>Animation</marquee>
+                    </div>
+
+    </div>
+
+
+                <!--Footer-->
+   <!--     Moving Statistics video
+    <iframe src="//www.slideshare.net/slideshow/embed_code/key/dIynvMlSqMGxO" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/MyMovingReviews/2017-trends-in-moving-mymovingreviews-annual-data-report" title="2017 Trends in Moving - MyMovingReviews Annual data Report" target="_blank">2017 Trends in Moving - MyMovingReviews Annual data Report</a> </strong> from <strong><a href="https://www.slideshare.net/MyMovingReviews" target="_blank">MyMovingReviews.com</a></strong> </div> -->
+
+
+            <!--Slideshow-->
+
+<script>
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+{% endblock %}
+
+
+
+</body>
+</html>
+>>>>>>> 1d9a8b62b92ca63099f3026aed1021c69f6cb07c

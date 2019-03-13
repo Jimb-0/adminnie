@@ -1,0 +1,149 @@
+<!DOCTYPE.html>
+{% extends 'index/layout.html' %}
+
+{% block body_block %}
+
+{% load staticfiles %}
+
+<div class="container-container">
+
+    <div class="container" id="insurance-container">
+
+                <div id="insurance-wrapper" >
+
+
+                        <!-- INSURANCE FORM -->
+                         <h1 style="text-align: center; padding-top:30px;">Insurance Requests</h1>
+
+                        <div id="insurance-form-div" >
+
+                            <form  action="#" method="POST" id="insurance-form" autcomplete="on">
+                              {% csrf_token %}
+
+                              <div class="input-set" >
+
+                                 <div class="input-box">
+
+                                      {{ insurance_stuff.name }}
+                                      {{ insurance_stuff.name.errors }}
+                                  </div>
+                                  <div class="input-box">
+                                      {{ insurance_stuff.email }}
+                                      {{ insurance_stuff.email.errors }}
+                                   </div>
+
+                              </div>
+                              <div class="input-set" >
+
+                                 <div class="input-box">
+
+                                      {{ insurance_stuff.from_zip }}
+                                      {{ insurance_stuff.from_zip.errors }}
+                                  </div>
+                                  <div class="input-box">
+                                      {{ insurance_stuff.to_zip }}
+                                      {{ insurance_stuff.to_zip.errors }}
+                                   </div>
+
+                              </div>
+                              <div class="input-set" >
+
+                                 <div class="input-box date-box">
+
+                                      {{ insurance_stuff.date }}
+                                      {{ insurance_stuff.date.errors }}
+                                  </div>
+
+                              </div>
+
+                              <div class="submit-box">
+                                  <input type="submit" class="columns large-3 small-4 button submit-input" value="Submit" style="border-radius:5px;">
+                              </div>
+                            </form>
+                        </div>
+            <!-- Insurance Explanation -->
+                        <div id="insurance-requests">
+                           <div class="columns large-6 medium-12">
+                           <img src="{% static 'index/pics/Cityview.JPG' %}" class="columns large-6 medium-6 show-for-medium-only">
+                           <img src="{% static 'index/pics/Cityview.JPG' %}" class="columns large-6 medium-6 show-for-small-only">
+
+                            <h1> Insurance Requests</h1>
+                                <p >If you're moving into/out of a building with elevators, marble walls
+                                or glass floors, your building may require your moving company to have insurance…don’t worry, we have it. As we are dedicated to processing each insurance request thoroughly, please submit your request at least 3-5 days before your building’s deadline. When you have already booked your move, you can submit your insurance request by emailing <span><em>nomadservicesny@gmail.com </em></span>a sample of the building’s COI (See Below).
+
+
+
+                                 </p>
+                            </div>
+                             <img src="{% static 'index/pics/Cityview.JPG' %}" class="columns large-6 show-for-small show-for-large">
+                    </div>
+                            <div class="clear"></div>
+                        <!-- COI EXPLAINED -->
+
+            <div id="coi-wrapper">
+
+               <img src="{% static 'index/pics/calculator.jpg' %}" class="columns large-6 show-for-large" style="float:right">
+
+               <div  class="columns large-6 medium-12">
+
+                   <img src="{% static 'index/pics/calculator.jpg' %}" class="columns large-6 medium-6 show-for-medium-only">
+
+            <div>
+
+
+
+                <div id="cert">
+
+
+                        <h1>Certificate of Insurance</h1>
+                            Here is an example of a certificate of liability insurance to serve as a template for what your building may request.
+
+                            The sections labeled on this form must be filled out when submitted in order to complete your request in a timely manner.
+                </div>
+
+                <div>
+                    <img src="{% static 'index/pics/calculator.jpg' %}" class="columns large-6 show-for-small-only">
+                <h2> COI Turnover Time</h2>
+                       <p>Below are the 3 different ways your building could request insurance (they will only require one to be fulfilled) and their respective turnover times.</p>
+
+                   <h3> Sample COI</h3>
+                            <p>This is the fastest and simplest way to provide proof of insurance. We send you or your building a sample of our insurance; this can be processed in the same day.</p>
+
+                    <h3>Certificate Holder</h3>
+                            <p>Since there is very little needed to name a certificate holder (you or your building) this process only takes about 1-2 business days.</p>
+
+                    <h3>Additionally Insured</h3>
+                            <p>This generally takes the longest; to fulfill this request we must participate in a chain of communication with our insurance team and the building issuing the request, which can take anywhere from 3-5 business days.
+                            </p>
+
+
+                </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+
+
+            <div class="clear"></div>
+    </div>
+</div>
+
+
+
+    <div id="back-to-top">
+       <a href="#" title="back-to-top">
+        <i class="fi-arrow-up"></i>
+        </a>
+    </div>
+
+
+
+
+
+{% endblock %}
+</body>
+
+</html>
